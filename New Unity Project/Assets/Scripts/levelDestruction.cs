@@ -15,8 +15,9 @@ public class levelDestruction : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (transform.position.x < destructionPoint.transform.position.x)
-			Destroy (gameObject);
-	
+		if (transform.position.x < destructionPoint.transform.position.x) {
+		
+			gameObject.SetActive(false);
+		}
 	}
 }
