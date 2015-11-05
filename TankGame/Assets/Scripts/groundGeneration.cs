@@ -27,6 +27,9 @@ public class groundGeneration : MonoBehaviour {
 	private int maxGapTime = 20;
 	private bool placingGap;
 
+	private int gapChance = 90;
+	public int gapChanceGen;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -49,13 +52,18 @@ public class groundGeneration : MonoBehaviour {
 		if (transform.position.x < generationsPoint.position.x) {
 
 			platformSelector = 0;
+
+			gapChanceGen = Random.Range (0, 100);
+
+			if(gapChanceGen > gapChance)
+				distanceBetween = Random.Range (distanceBetweenMin, distanceBetweenMax);
 			
 			// Set this object to the position to create the platform
 			transform.position = new Vector3 (transform.position.x + (platformWidths[platformSelector] / 2) + distanceBetween, transform.position.y, transform.position.z);
 			
 			// Grab the platform to be placed
 			GameObject newPlatform = objectPools[platformSelector].GetPooledObject();
-			
+
 			// Place the platform and make it visible
 			newPlatform.transform.position = transform.position;
 			newPlatform.transform.rotation = transform.rotation;
@@ -63,8 +71,10 @@ public class groundGeneration : MonoBehaviour {
 
 			transform.position = new Vector3 (transform.position.x + (platformWidths[platformSelector] / 2), transform.position.y, transform.position.z);
 
-			if(!placingGap)
-				StartCoroutine("PlaceGapCo");
+			distanceBetween = 0;
+
+			//if(!placingGap)
+			//	StartCoroutine("PlaceGapCo");
 		}
 
 

@@ -24,10 +24,14 @@ public class PlayerController : MonoBehaviour {
 
 	public GameManager gameManager;
 
-	public
+	private Transform shotStartPos;
+	public GameObject bullets;
+	public ObjectPooler bulletPools;
 
 	// Use this for initialization
 	void Start () {
+
+		shotStartPos = transform.FindChild ("ShotStartPos").gameObject.GetComponent<Transform> ();
 
 		groundCheckObj = transform.FindChild ("GroundCheck").gameObject;
 		groundCheck = groundCheckObj.GetComponent<Collider2D> ();
@@ -40,36 +44,48 @@ public class PlayerController : MonoBehaviour {
 		hoverSlider = FindObjectOfType<Slider> ();
 
 		hoverSlider.maxValue = jumpTime;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		Movement ();
 		GroundCheck ();
-		Jumping ();
+
+		if (jumpTimeCounter < jumpTime)
+			HoverRefill ();
+
+		if (Input.GetKey (KeyCode.Space) || (Input.GetKey (KeyCode.Mouse0)))
+			Jumping ();
+			
+		if (Input.GetKeyDown (KeyCode.F) || Input.GetKey (KeyCode.Mouse1))
+			Shooting ();
 
 	}
 
+	void Shooting () {
+		bullets = bulletPools.GetPooledObject ();
+		bullets.transform.position = shotStartPos.transform.position;
+		bullets.transform.rotation = shotStartPos.transform.rotation;
+		bullets.SetActive (true);
+		//Instantiate (bullets, shotStartPos.transform.position, shotStartPos.transform.rotation);
+
+	}
+
+
 	void GroundCheck () {
-		grounded = Physics2D.IsTouchingLayers (playerCollider, whatIsGround);
+		grounded = Physics2D.IsTouchingLayers (groundCheck, whatIsGround);
 	}
 
 	void Jumping () {
-
-		if (grounded) {
-			if (Input.GetKeyDown (KeyCode.Space) || (Input.GetKeyDown (KeyCode.Mouse0))) {
-				playerRigidbody.velocity = new Vector2 (playerRigidbody.velocity.x, hoverForce);
-			}
+		if (jumpTimeCounter > 0)
+		{
+			playerRigidbody.velocity = new Vector2 (playerRigidbody.velocity.x, playerRigidbody.velocity.y + hoverForce);
+			jumpTimeCounter -= Time.deltaTime;
 		}
+	}
 
-		if (Input.GetKey (KeyCode.Space) || Input.GetKey (KeyCode.Mouse0))
-	    {
-			if (jumpTimeCounter > 0)
-			{
-				playerRigidbody.velocity = new Vector2 (playerRigidbody.velocity.x, playerRigidbody.velocity.y + hoverForce);
-				jumpTimeCounter -= Time.deltaTime;
-			}
-		}
+	void HoverRefill() {
 
 		if (grounded && jumpTimeCounter < jumpTime)
 			jumpTimeCounter += Time.deltaTime;
@@ -81,14 +97,10 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Movement () {
-
 		playerRigidbody.velocity = new Vector2 (moveSpeed, playerRigidbody.velocity.y);
-		
-
-
 	}
 
-	void OnCollisionEnter2D (Collision2D other)
+	void OnTriggerEnter2D (Collider2D other)
 	{
 		if(other.gameObject.tag == "Deathzone")
 			gameManager.RestartGame();

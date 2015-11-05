@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour {
 
 	private ScoreManager theScoreManager;
 
+	private Camera cameraController;
+	private Vector3 cameraStartPoint;
+
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +30,10 @@ public class GameManager : MonoBehaviour {
 		playerStartPoint = player.transform.position;
 
 		theScoreManager = FindObjectOfType<ScoreManager> ();
+
+		cameraController = FindObjectOfType<Camera> ();
+
+		cameraStartPoint = cameraController.GetComponent<Transform> ().position;
 	}
 	
 	// Update is called once per frame
@@ -49,6 +56,7 @@ public class GameManager : MonoBehaviour {
 			platformList [i].gameObject.SetActive (false);
 
 		player.transform.position = playerStartPoint;
+		cameraController.transform.position = cameraStartPoint;
 		levelGenerator.position = levelStartPoint;
 		ceilingGenerator.position = ceilingStartPoint;
 		player.gameObject.SetActive (true);

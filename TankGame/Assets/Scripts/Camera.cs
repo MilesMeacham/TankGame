@@ -10,9 +10,16 @@ public class Camera : MonoBehaviour {
 	//private float distanceUp;
 	//private float distanceToMoveUp;
 
+	private Rigidbody2D cameraRigidbody;
+
+	public int moveSpeed = 5;
+
 	// Use this for initialization
 	void Start () {
 	
+		cameraRigidbody = GetComponent<Rigidbody2D> ();
+		cameraRigidbody.gravityScale = 0;
+
 		player = FindObjectOfType<PlayerController> ();
 
 		lastPosition = player.transform.position;
@@ -20,8 +27,9 @@ public class Camera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		CameraMovement ();
 
-		distanceToMove = player.transform.position.x - lastPosition.x;
+		//distanceToMove = player.transform.position.x - lastPosition.x;
 		//distanceToMoveUp = player.transform.position.y - lastPosition.y;
 		//distanceUp = player.transform.position.y;
 
@@ -33,9 +41,14 @@ public class Camera : MonoBehaviour {
 		}
 		*/
 
-		transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
+		//transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
 	
-		lastPosition = player.transform.position;
+		//lastPosition = player.transform.position;
 
+	}
+
+	void CameraMovement()
+	{
+		cameraRigidbody.velocity = new Vector2 (moveSpeed, 0);
 	}
 }
