@@ -496,7 +496,7 @@ MonoBehaviour:
   distanceBetweenMin: 0
   distanceBetweenMax: 0
   objectPools:
-  - {fileID: 537715414}
+  - {fileID: 1159296793}
 --- !u!4 &547601067
 Transform:
   m_ObjectHideFlags: 0
@@ -508,7 +508,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &577862228
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +647,7 @@ Transform:
   - {fileID: 1106689047}
   - {fileID: 1703871023}
   - {fileID: 1706691425}
+  - {fileID: 1261262525}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!114 &622088337
@@ -730,6 +731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelGenerator: {fileID: 1238199674}
+  ceilingGenerator: {fileID: 547601067}
   player: {fileID: 1302927360}
 --- !u!4 &831218585
 Transform:
@@ -837,6 +839,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 622088336}
   m_RootOrder: 0
+--- !u!1 &1159296792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1159296794}
+  - 114: {fileID: 1159296793}
+  m_Layer: 0
+  m_Name: ObjectPoolerCeiling
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1159296793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1159296792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dcb4a3b164edc14ba30d779280daec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObject: {fileID: 169522, guid: 0b7de62353e6f4a3eb6ac25e10852dd7, type: 2}
+  pooledAmount: 5
+--- !u!4 &1159296794
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1159296792}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.57401073, y: 2.29778004, z: -.1171875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1522911509}
+  m_RootOrder: 1
 --- !u!1 &1218531400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +1072,47 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -24.3600006}
   m_SizeDelta: {x: 50.2000122, y: 30}
   m_Pivot: {x: .5, y: .5}
+--- !u!1 &1261262524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1261262525}
+  - 61: {fileID: 1261262526}
+  m_Layer: 8
+  m_Name: deathZoneBack
+  m_TagString: Deathzone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1261262525
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1261262524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.6199999, y: 1.17999995, z: 0}
+  m_LocalScale: {x: 1.5069437, y: 13.9664068, z: 1}
+  m_Children: []
+  m_Father: {fileID: 622088336}
+  m_RootOrder: 3
+--- !u!61 &1261262526
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1261262524}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1302927354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,7 +1220,7 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 10
   jumpTime: 2
-  hoverForce: .200000003
+  hoverForce: .400000006
   hoverSlider: {fileID: 0}
   grounded: 0
   whatIsGround:
@@ -1308,6 +1392,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 537715413}
+  - {fileID: 1159296794}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!1 &1703871022
@@ -1361,7 +1446,7 @@ Transform:
   m_GameObject: {fileID: 1706691424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -5.9000001, z: 0}
-  m_LocalScale: {x: 46.8625031, y: 1, z: 1}
+  m_LocalScale: {x: 24.6028137, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 622088336}
   m_RootOrder: 2

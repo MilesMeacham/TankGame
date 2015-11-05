@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour {
 	public Transform levelGenerator;
 	private Vector3 levelStartPoint;
 
+	public Transform ceilingGenerator;
+	private Vector3 ceilingStartPoint;
+
 	public PlayerController player;
 	private Vector3 playerStartPoint;
 
@@ -20,6 +23,7 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 	
 		levelStartPoint = levelGenerator.position;
+		ceilingStartPoint = ceilingGenerator.position;
 		playerStartPoint = player.transform.position;
 
 		theScoreManager = FindObjectOfType<ScoreManager> ();
@@ -46,6 +50,7 @@ public class GameManager : MonoBehaviour {
 
 		player.transform.position = playerStartPoint;
 		levelGenerator.position = levelStartPoint;
+		ceilingGenerator.position = ceilingStartPoint;
 		player.gameObject.SetActive (true);
 		theScoreManager.scoreCount = 0;
 		theScoreManager.scoreIncrease = true;
