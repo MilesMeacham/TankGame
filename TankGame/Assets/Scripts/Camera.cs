@@ -26,7 +26,7 @@ public class Camera : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		CameraMovement ();
 
 		//distanceToMove = player.transform.position.x - lastPosition.x;
