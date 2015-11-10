@@ -1,27 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterController : MonoBehaviour {
+public class BaseClass : MonoBehaviour {
 
-	public float health;
-	public float maxHealth;
-	public float minHealth;
-	public float damage;
-	public float moveSpeed;
-	public float jumpForce;
-	public float jumpTime;
+	protected float health;
+	protected float maxHealth;
+	protected float minHealth;
+	protected float damage;
 
 
 
-	void character () {
+
+	// Use this for initialization
+	protected void Start () {
 		health = 10;
 		maxHealth = 10;
 		minHealth = 0;
 		damage = 5;
-		moveSpeed = 5;
-		jumpForce = 0.2f;
-		jumpTime = 2;
+	}
 
+	protected void Update () {
+
+		if (health == minHealth)
+			destroyObject ();
 	}
 
 	protected void addHealth (float healthToAdd)
@@ -31,19 +32,20 @@ public class CharacterController : MonoBehaviour {
 			health = maxHealth;
 	}
 
+	
 	public void removeHealth (float healthToRemove)
 	{
 		health -= healthToRemove;
 		if (health < healthToRemove)
 			health = minHealth;
 	}
-
+	
 	protected void addMaxHealth (float maxHealthToAdd)
 	{
 		maxHealth += maxHealthToAdd;
-
+		
 	}
-
+	
 	public void removeMaxHealth (float maxHealthToRemove)
 	{
 		maxHealth -= maxHealthToRemove;
@@ -51,36 +53,12 @@ public class CharacterController : MonoBehaviour {
 			health = maxHealth;
 	}
 
-
-
-
-
-
-	protected float getHealth () 
+	protected void destroyObject()
 	{
-		return health;
+		gameObject.SetActive (false);
+
+		health = maxHealth;
+
 	}
-
-	protected float getDamage () 
-	{
-		return damage;
-	}
-
-	float getMoveSpeed () 
-	{
-		return moveSpeed;
-	}
-
-	float getJumpForce () 
-	{
-		return jumpForce;
-	}
-
-	float getJumpTime () 
-	{
-		return jumpTime;
-	}
-
-
 
 }

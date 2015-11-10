@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Deathzone
+  - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX

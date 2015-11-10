@@ -1,42 +1,38 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyScript : MonoBehaviour {
+public class GroundEnemy : EnemyBaseClass {
 
-	public PlayerController player;
-	
 	public float desiredDistanceFromPlayer = 10;
 	public float actualDistanceFromPlayer;
-
-	private Rigidbody2D enemyRb;
 	
-	public int moveSpeed = 5;
+	public int enemyMoveSpeed = 5;
 	
 	// Use this for initialization
-	void Start () {
-		
-		enemyRb = GetComponent<Rigidbody2D> ();
-		
-		player = FindObjectOfType<PlayerController> ();
-
+	new void Start () {
+		base.Start();
+		moveSpeed = enemyMoveSpeed;
+		rb = GetComponent<Rigidbody2D> ();
 	}
-
-	void Update () {
-
+	
+	new void Update () {
+		base.Update ();
 		actualDistanceFromPlayer = transform.position.x - player.transform.position.x;
-
+		
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		EnemyMovement ();
+
 		
 	}
 	
 	void EnemyMovement()
 	{
-		enemyRb.velocity = new Vector2 (moveSpeed, enemyRb.velocity.y);
-
+	
+		Movement ();
+		
 		if (actualDistanceFromPlayer < desiredDistanceFromPlayer)
 			moveSpeed = 8;
 		else if (actualDistanceFromPlayer > desiredDistanceFromPlayer + 1)
@@ -44,4 +40,6 @@ public class EnemyScript : MonoBehaviour {
 		else
 			moveSpeed = 5;
 	}
+
+
 }

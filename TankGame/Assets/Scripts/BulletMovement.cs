@@ -22,7 +22,7 @@ public class BulletMovement : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if(other.gameObject.tag == "Deathzone")
+		if(other.gameObject.tag == "Deathzone" || other.gameObject.tag == "Enemy")
 			gameObject.SetActive (false);
 		
 	}

@@ -5,10 +5,10 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed = 5;
-	public float jumpForce = 10;
+	public float jumpForce = 0.4f;
 	public float jumpTime = 2f;
 	private float jumpTimeCounter;
-	public float hoverForce = 0.2f;
+
 
 	public Slider hoverSlider;
 
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		Movement ();
 		GroundCheck ();
 
@@ -68,8 +68,6 @@ public class PlayerController : MonoBehaviour {
 		bullets.transform.position = shotStartPos.transform.position;
 		bullets.transform.rotation = shotStartPos.transform.rotation;
 		bullets.SetActive (true);
-		//Instantiate (bullets, shotStartPos.transform.position, shotStartPos.transform.rotation);
-
 	}
 
 
@@ -80,7 +78,7 @@ public class PlayerController : MonoBehaviour {
 	void Jumping () {
 		if (jumpTimeCounter > 0)
 		{
-			playerRigidbody.velocity = new Vector2 (playerRigidbody.velocity.x, playerRigidbody.velocity.y + hoverForce);
+			playerRigidbody.velocity = new Vector2 (playerRigidbody.velocity.x, playerRigidbody.velocity.y + jumpForce);
 			jumpTimeCounter -= Time.deltaTime;
 		}
 	}

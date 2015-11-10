@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Inheritance/Player.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Inheritance\BaseClass.cs">
     <Files>
-      <File FileName="Assets/Scripts/EnemyScript.cs" Line="40" Column="60" />
-      <File FileName="Assets/Scripts/Camera.cs" Line="29" Column="12" />
-      <File FileName="Assets/Scripts/Inheritance/CharacterController.cs" Line="37" Column="7" />
-      <File FileName="Assets/Scripts/Inheritance/Player.cs" Line="21" Column="23" />
+      <File FileName="Assets\Scripts\Inheritance\EnemyFlying.cs" Line="49" Column="32" />
+      <File FileName="Assets\Scripts\Generation\EnemyGeneration.cs" Line="58" Column="4" />
+      <File FileName="Assets\Scripts\Generation\groundGeneration.cs" Line="62" Column="4" />
+      <File FileName="Assets\Scripts\Inheritance\BaseClass.cs" Line="60" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -23,9 +23,9 @@ public class groundGeneration : MonoBehaviour {
 
 
 	private int randGapTime;
-	private int minGapTime = 5;
-	private int maxGapTime = 20;
-	private bool placingGap;
+//	private int minGapTime = 5;
+//	private int maxGapTime = 20;
+//	private bool placingGap;
 
 	private int gapChance = 90;
 	public int gapChanceGen;
@@ -80,7 +80,7 @@ public class groundGeneration : MonoBehaviour {
 
 		
 	}
-
+/*
 	public IEnumerator PlaceGapCo()
 	{
 		placingGap = true;
@@ -96,7 +96,7 @@ public class groundGeneration : MonoBehaviour {
 
 
 	}
-
+*/
 
 }
 

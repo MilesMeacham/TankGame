@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Camera : MonoBehaviour {
+public class MyCamera : MonoBehaviour {
 
-	public PlayerController player;
+	public Player player;
 
-	private Vector3 lastPosition;
+	//private Vector3 lastPosition;
 	private float distanceToMove;
 	//private float distanceUp;
 	//private float distanceToMoveUp;
@@ -20,9 +20,9 @@ public class Camera : MonoBehaviour {
 		cameraRigidbody = GetComponent<Rigidbody2D> ();
 		cameraRigidbody.gravityScale = 0;
 
-		player = FindObjectOfType<PlayerController> ();
+		player = FindObjectOfType<Player> ();
 
-		lastPosition = player.transform.position;
+		//lastPosition = player.transform.position;
 	}
 	
 	// Update is called once per frame

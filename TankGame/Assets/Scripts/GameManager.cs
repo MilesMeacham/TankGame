@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 	public Transform ceilingGenerator;
 	private Vector3 ceilingStartPoint;
 
-	public PlayerController player;
+	public Player player;
 	private Vector3 playerStartPoint;
 
 	private levelDestruction[] platformList;
@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour {
 
 	private Camera cameraController;
 	private Vector3 cameraStartPoint;
+
+	public DeathMenu gameOverScreen;
 
 
 	// Use this for initialization
@@ -43,9 +45,31 @@ public class GameManager : MonoBehaviour {
 
 	public void RestartGame()
 	{
-		StartCoroutine ("RestartGameCo");
+		player.gameObject.SetActive (false);
+		theScoreManager.scoreIncrease = false;
+
+		gameOverScreen.gameObject.SetActive (true);
+
+		//StartCoroutine ("RestartGameCo");
 	}
 
+	public void ResetGame()
+	{
+		gameOverScreen.gameObject.SetActive (false);
+		platformList = FindObjectsOfType<levelDestruction> ();
+		for (int i = 0; i < platformList.Length; i++)
+			platformList [i].gameObject.SetActive (false);
+		
+		player.transform.position = playerStartPoint;
+		cameraController.transform.position = cameraStartPoint;
+		levelGenerator.position = levelStartPoint;
+		ceilingGenerator.position = ceilingStartPoint;
+		player.gameObject.SetActive (true);
+		theScoreManager.scoreCount = 0;
+		theScoreManager.scoreIncrease = true;
+	}
+
+/*
 	public IEnumerator RestartGameCo()
 	{
 		player.gameObject.SetActive (false);
@@ -64,6 +88,6 @@ public class GameManager : MonoBehaviour {
 		theScoreManager.scoreIncrease = true;
 
 	}
-
+*/
 
 }
