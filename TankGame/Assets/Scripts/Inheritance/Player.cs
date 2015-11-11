@@ -6,6 +6,7 @@ public class Player : MyCharacterController {
 
 
 
+
 	public float playerHealth = 20;
 	public float playerDamage = 5;
 	public float playerJumpForce = 0.4f;

@@ -3,10 +3,10 @@ using System.Collections;
 
 public class BaseClass : MonoBehaviour {
 
-	protected float health;
-	protected float maxHealth;
-	protected float minHealth;
-	protected float damage;
+	public float health;
+	public float maxHealth;
+	public float minHealth;
+	public float damage;
 
 
 

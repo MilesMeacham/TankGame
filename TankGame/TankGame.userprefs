@@ -1,11 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Inheritance\BaseClass.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Inheritance/GroundEnemy.cs">
     <Files>
-      <File FileName="Assets\Scripts\Inheritance\EnemyFlying.cs" Line="49" Column="32" />
-      <File FileName="Assets\Scripts\Generation\EnemyGeneration.cs" Line="58" Column="4" />
-      <File FileName="Assets\Scripts\Generation\groundGeneration.cs" Line="62" Column="4" />
-      <File FileName="Assets\Scripts\Inheritance\BaseClass.cs" Line="60" Column="22" />
+      <File FileName="../../JuniorProj/GumBot/Assets/Modules/Camera/Camera Scripts/cameraController.cs" Line="32" Column="1" />
+      <File FileName="Assets/Scripts/Inheritance/GroundEnemy.cs" Line="36" Column="3" />
+      <File FileName="Assets/Scripts/Inheritance/EnemyFlying.cs" Line="9" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

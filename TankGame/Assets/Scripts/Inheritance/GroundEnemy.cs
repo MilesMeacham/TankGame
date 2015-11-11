@@ -7,12 +7,17 @@ public class GroundEnemy : EnemyBaseClass {
 	public float actualDistanceFromPlayer;
 	
 	public int enemyMoveSpeed = 5;
+
+	public bool timedShot;
+	private Transform enemyShotStartPos;
 	
 	// Use this for initialization
 	new void Start () {
 		base.Start();
 		moveSpeed = enemyMoveSpeed;
 		rb = GetComponent<Rigidbody2D> ();
+
+		enemyShotStartPos = transform.FindChild ("ShotStartPos").gameObject.GetComponent<Transform> ();
 	}
 	
 	new void Update () {
@@ -25,6 +30,8 @@ public class GroundEnemy : EnemyBaseClass {
 	void FixedUpdate () {
 		EnemyMovement ();
 
+		if (!timedShot)
+			StartCoroutine("TimedShotCo");
 		
 	}
 	
@@ -39,7 +46,16 @@ public class GroundEnemy : EnemyBaseClass {
 			moveSpeed = 3;
 		else
 			moveSpeed = 5;
+
+
 	}
 
+	IEnumerator TimedShotCo(){
+
+		timedShot = true;
+		yield return new WaitForSeconds (2f);
+		Shooting(enemyShotStartPos);
+		timedShot = false;
+	}
 
 }

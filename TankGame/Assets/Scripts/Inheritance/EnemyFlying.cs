@@ -4,13 +4,20 @@ using System.Collections;
 public class EnemyFlying : EnemyBaseClass {
 	
 
-	
+
+	new void Awake () {
+		enemyHealth = 5;
+
+	}
+
 	// Use this for initialization
 	new void Start () {
 		base.Start();
 		rb = GetComponent<Rigidbody2D> ();
 		rb.gravityScale = 0;
 		FlyingFormation ();
+
+	
 
 	}
 	
