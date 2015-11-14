@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BulletMovement : MonoBehaviour {
 
-	public int moveSpeed = 20;
+	public int bulletMoveSpeed = 20;
 	public float bulletLifeSpan = 2f;
 
 
@@ -15,7 +15,7 @@ public class BulletMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		this.gameObject.GetComponent<Transform> ().transform.Translate (Vector2.right * moveSpeed * Time.deltaTime);
+		this.gameObject.GetComponent<Transform> ().transform.Translate (Vector2.right * bulletMoveSpeed * Time.deltaTime);
 
 
 	}

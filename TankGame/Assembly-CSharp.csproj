@@ -53,7 +53,7 @@
      <Compile Include="Assets\Scripts\Generation\groundGeneration.cs" />
      <Compile Include="Assets\Scripts\Generation\levelDestruction.cs" />
      <Compile Include="Assets\Scripts\Generation\levelGenerationComplicated.cs" />
-     <Compile Include="Assets\Scripts\Inheritance\BaseClass.cs" />
+     <Compile Include="Assets\Scripts\Inheritance\BaseDestructableClass.cs" />
      <Compile Include="Assets\Scripts\Inheritance\EnemyBaseClass.cs" />
      <Compile Include="Assets\Scripts\Inheritance\EnemyFlying.cs" />
      <Compile Include="Assets\Scripts\Inheritance\GroundEnemy.cs" />

@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyFlying : EnemyBaseClass {
-	
 
+public class EnemyFlying : EnemyBaseClass {
 
 	new void Awake () {
 		enemyHealth = 5;
@@ -25,11 +24,12 @@ public class EnemyFlying : EnemyBaseClass {
 		base.Update ();
 		Movement ();
 		VerticalMovement ();
+		FlyingFormation ();
 	}
 
 
 	void FlyingFormation(){
-
+	
 		StartCoroutine ("FlyingFormationCo");
 
 	}

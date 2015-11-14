@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MyCharacterController : BaseClass {
+public class MyCharacterController : BaseDestuctableClass {
 
 
 

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseClass : MonoBehaviour {
+public class BaseDestuctableClass : MonoBehaviour {
 
 	public float health;
 	public float maxHealth;
