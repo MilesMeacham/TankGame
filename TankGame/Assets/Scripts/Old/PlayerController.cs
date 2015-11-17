@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour {
 	public bool grounded;
 	public LayerMask whatIsGround;
 
-	private Collider2D playerCollider;
+//	private Collider2D playerCollider;
 	private Collider2D groundCheck;
 
 	private GameObject groundCheckObj;
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour {
 		groundCheck = groundCheckObj.GetComponent<Collider2D> ();
 
 		playerRigidbody = GetComponent<Rigidbody2D> ();
-		playerCollider = GetComponent<Collider2D> ();
+//		playerCollider = GetComponent<Collider2D> ();
 
 		jumpTimeCounter = jumpTime;
 

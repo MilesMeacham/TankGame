@@ -1,32 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyBaseClass : MyCharacterController {
+public class EnemyBaseClass : MonoBehaviour {
 
-	public Player player;
+	public CharacterHealth theCharacterHealth;
 
-	public float enemyHealth = 20;
-	public float enemyDamage = 5;
-	public float enemyJumpForce = 0.8f;
-	public float enemyJumpTime = 100;
-	public float enemyJumpTimeCounter;
+	protected GameObject player;
 
-	
 	// Use this for initialization
-	protected new void Start () {
-		base.Start ();
-		health = enemyHealth;
-		maxHealth = enemyHealth;
-		damage = enemyDamage;
-		jumpTime = enemyJumpTime;
+	public void Start () {
 
-		//jumpForce = enemyJumpForce;
-		player = FindObjectOfType<Player> ();
-		
-		enemyJumpTimeCounter = enemyJumpTime;
-		jumpTimeCounter = enemyJumpTimeCounter;
+		theCharacterHealth = GetComponent<CharacterHealth> ();
+		player = GameObject.FindGameObjectWithTag ("Player");	
 
-		
 	}
 
 	void FixedUpdate () {
@@ -35,10 +21,14 @@ public class EnemyBaseClass : MyCharacterController {
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (other.gameObject.tag == "Bullet"){
+		if (other.gameObject.tag == "PlayerBullet")
+			theCharacterHealth.removeHealth(other.GetComponent<BulletMovement>().bulletDamage);
 
-			removeHealth(player.playerDamage);
-		}
+		if (other.gameObject.name == "deathZone")
+			theCharacterHealth.destroyObject ();
+
+
 	}
+	
 
 }

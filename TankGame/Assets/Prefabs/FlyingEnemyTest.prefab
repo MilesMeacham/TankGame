@@ -13,6 +13,8 @@ GameObject:
   - 114: {fileID: 11410760}
   - 50: {fileID: 5073836}
   - 61: {fileID: 6116486}
+  - 114: {fileID: 11418216}
+  - 114: {fileID: 11448314}
   m_Layer: 0
   m_Name: FlyingEnemyTest
   m_TagString: Untagged
@@ -87,7 +89,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 163698}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -103,22 +105,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a790cade76031584995afb8f5c9b1c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theCharacterHealth: {fileID: 0}
+  theCharacterMotor: {fileID: 11418216}
+--- !u!114 &11418216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0bb6fc754215e4b9e0220d42f30852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   moveSpeed: 0
   jumpForce: 0
-  bulletPools: {fileID: 0}
-  player: {fileID: 0}
-  enemyHealth: 20
-  enemyDamage: 5
-  enemyJumpForce: .800000012
-  enemyJumpTime: 100
-  enemyJumpTimeCounter: 0
+  verticalMoveSpeed: 0
+  rb: {fileID: 0}
+--- !u!114 &11448314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4435afcfc0217742acdebb35ca8a10a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  maxHealth: 0
+  minHealth: 0
+  damage: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: theCharacterMotor
+      value: 
+      objectReference: {fileID: 11418216}
+    - target: {fileID: 0}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 163698}

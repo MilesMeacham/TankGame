@@ -3,8 +3,9 @@ using System.Collections;
 
 public class BulletMovement : MonoBehaviour {
 
-	public int bulletMoveSpeed = 20;
+	public float bulletMoveSpeed = 20;
 	public float bulletLifeSpan = 2f;
+	public float bulletDamage;
 
 
 	void Start () {

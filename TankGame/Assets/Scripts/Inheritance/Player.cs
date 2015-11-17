@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Player : MyCharacterController {
+public class Player : MonoBehaviour {
 
 
-
+/*
 
 	public float playerHealth = 20;
 	public float playerDamage = 5;
@@ -71,9 +71,8 @@ public class Player : MyCharacterController {
 
 		if (jumpTimeCounter < jumpTime)
 			HoverRefill ();
-
-
 	}
+
 	void FixedUpdate () {
 		if (Input.GetKey (KeyCode.Space) || (Input.GetKey (KeyCode.Mouse0)))
 			Jumping (rb, playerJumpForce);
@@ -102,5 +101,6 @@ public class Player : MyCharacterController {
 		
 		hoverSlider.value = jumpTimeCounter;
 	}
+	*/
 
 }

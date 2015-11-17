@@ -10,9 +10,13 @@ public class ObjectPooler : MonoBehaviour {
 
 	List <GameObject> pooledObjects;
 
+	public GameObject parent;
+
 	// Use this for initialization
 	void Start () {
 
+		parent = new GameObject ();
+		parent.name = pooledObject.name + "s";
 		// Create a new list of GameObjects
 		pooledObjects = new List<GameObject> ();
 
@@ -20,6 +24,7 @@ public class ObjectPooler : MonoBehaviour {
 		// We will call these objects later
 		for (int i = 0; i < pooledAmount; i++) {
 			GameObject obj = (GameObject)Instantiate(pooledObject);
+			obj.transform.parent = parent.transform;
 			obj.SetActive (false);
 			pooledObjects.Add (obj);
 		}
@@ -43,6 +48,7 @@ public class ObjectPooler : MonoBehaviour {
 		// If a desired object was not found Inactive
 		// Create the object and add it to the pooledObjects list
 		GameObject obj = (GameObject)Instantiate(pooledObject);
+		obj.transform.parent = parent.transform;
 		obj.SetActive (false);
 		pooledObjects.Add (obj);
 

@@ -9,12 +9,12 @@ public class GameManager : MonoBehaviour {
 	public Transform ceilingGenerator;
 	private Vector3 ceilingStartPoint;
 
-	public Player player;
+	public CharacterMotor player;
 	private Vector3 playerStartPoint;
 
 	private levelDestruction[] platformList;
 
-	private float deathDelay = 0.5f;
+//	private float deathDelay = 0.5f;
 
 	private ScoreManager theScoreManager;
 

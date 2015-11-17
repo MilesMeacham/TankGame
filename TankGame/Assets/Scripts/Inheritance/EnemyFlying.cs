@@ -1,35 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
 public class EnemyFlying : EnemyBaseClass {
+	
+	public CharacterMotor theCharacterMotor;
 
-	new void Awake () {
-		enemyHealth = 5;
-
-	}
 
 	// Use this for initialization
 	new void Start () {
-		base.Start();
-		rb = GetComponent<Rigidbody2D> ();
-		rb.gravityScale = 0;
+		base.Start ();
 		FlyingFormation ();
-
-	
-
+		GetComponent<Rigidbody2D> ().gravityScale = 0;
 	}
 	
-	new void Update () {
-		base.Update ();
-		Movement ();
-		VerticalMovement ();
-		FlyingFormation ();
+	void FixedUpdate () {
+		theCharacterMotor.Movement ();
+		theCharacterMotor.VerticalMovement ();
 	}
 
 
 	void FlyingFormation(){
-	
+
 		StartCoroutine ("FlyingFormationCo");
 
 	}
@@ -37,24 +28,25 @@ public class EnemyFlying : EnemyBaseClass {
 	IEnumerator FlyingFormationCo(){
 
 
-		jumpForce = 0;
-		moveSpeed = 0;
+		theCharacterMotor.verticalMoveSpeed = 0;
+		theCharacterMotor.moveSpeed = 0;
 		yield return new WaitForSeconds (2f);
-		jumpForce = 2;
-		moveSpeed = 5;
+		theCharacterMotor.verticalMoveSpeed = 2;
+		theCharacterMotor.moveSpeed = 5;
 		yield return new WaitForSeconds (1f);
-		jumpForce = 0;
-		moveSpeed = 7;
+		theCharacterMotor.verticalMoveSpeed = 0;
+		theCharacterMotor.moveSpeed = 7;
 		yield return new WaitForSeconds (1f);
-		jumpForce = -2;
-		moveSpeed = 5;
+		theCharacterMotor.verticalMoveSpeed = -2;
+		theCharacterMotor.moveSpeed = 5;
 		yield return new WaitForSeconds (1f);
-		jumpForce = 0;
-		moveSpeed = -2;
+		theCharacterMotor.verticalMoveSpeed = 0;
+		theCharacterMotor.moveSpeed = -2;
 
 		yield return new WaitForSeconds (3f);
 		gameObject.SetActive (false);
 	
 
 	}
+
 }

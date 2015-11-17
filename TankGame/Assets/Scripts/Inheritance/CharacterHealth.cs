@@ -1,31 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseDestuctableClass : MonoBehaviour {
+public class CharacterHealth : MonoBehaviour {
 
 	public float health;
 	public float maxHealth;
 	public float minHealth;
-	public float damage;
-
-
-
-
-	// Use this for initialization
-	protected void Start () {
-		health = 10;
-		maxHealth = 10;
-		minHealth = 0;
-		damage = 5;
-	}
-
-	protected void Update () {
+	
+	public void Update () {
 
 		if (health == minHealth)
 			destroyObject ();
 	}
 
-	protected void addHealth (float healthToAdd)
+	public void addHealth (float healthToAdd)
 	{
 		health += healthToAdd;
 		if (health > maxHealth)
@@ -40,7 +28,7 @@ public class BaseDestuctableClass : MonoBehaviour {
 			health = minHealth;
 	}
 	
-	protected void addMaxHealth (float maxHealthToAdd)
+	public void addMaxHealth (float maxHealthToAdd)
 	{
 		maxHealth += maxHealthToAdd;
 		
@@ -53,7 +41,7 @@ public class BaseDestuctableClass : MonoBehaviour {
 			health = maxHealth;
 	}
 
-	protected void destroyObject()
+	public void destroyObject()
 	{
 		gameObject.SetActive (false);
 
