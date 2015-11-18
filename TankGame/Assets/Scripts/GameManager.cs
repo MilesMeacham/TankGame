@@ -60,12 +60,15 @@ public class GameManager : MonoBehaviour {
 		for (int i = 0; i < platformList.Length; i++)
 			platformList [i].gameObject.SetActive (false);
 		
-		player.transform.position = playerStartPoint;
+
 		cameraController.transform.position = cameraStartPoint;
+		player.transform.position = playerStartPoint;
+		//player.GetComponent<CharacterHealth> ().health = GetComponent<CharacterHealth> ().maxHealth;
 		levelGenerator.position = levelStartPoint;
 		ceilingGenerator.position = ceilingStartPoint;
 		player.gameObject.SetActive (true);
 		theScoreManager.scoreCount = 0;
+		theScoreManager.additionalScore = 0;
 		theScoreManager.scoreIncrease = true;
 	}
 

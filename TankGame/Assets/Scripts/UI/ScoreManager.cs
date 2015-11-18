@@ -11,23 +11,34 @@ public class ScoreManager : MonoBehaviour {
 	public float highScoreCount;
 
 	public float pointsPerSecond = 1;
+	public float additionalScore = 0;
 
 	public bool scoreIncrease;
+
+	public float startingPosition;
+	public float distanceTraveled;
+
+	public GameObject player;
 
 	// Use this for initialization
 	void Start () {
 		// Check for any highScore
 		if (PlayerPrefs.HasKey ("HighScore"))
 			highScoreCount = PlayerPrefs.GetFloat ("HighScore");
+	
+
+		player = GameObject.FindGameObjectWithTag ("Player");
+		startingPosition = player.GetComponent<Transform> ().position.x;
+
 	}
-
-
-
 	// Update is called once per frame
 	void Update () {
 	
+		distanceTraveled = player.GetComponent<Transform> ().position.x / 10;
+
 		if (scoreIncrease)
-			scoreCount += pointsPerSecond * Time.deltaTime;
+			scoreCount = distanceTraveled + additionalScore;
+			//scoreCount += pointsPerSecond * Time.deltaTime;
 
 		if (scoreCount > highScoreCount) 
 		{

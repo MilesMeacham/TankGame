@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BulletMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Character\CharacterMotor.cs">
     <Files>
-      <File FileName="../../JuniorProj/GumBot/Assets/Modules/Level/Scripts/Level/planetGeneration.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BulletMovement.cs" Line="12" Column="2" />
+      <File FileName="Assets\Scripts\Character\CharacterMotor.cs" Line="44" Column="93" />
+      <File FileName="Assets\Scripts\Character\CharacterHealth.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character\CharacterPlayer.cs" Line="26" Column="3" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="66" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

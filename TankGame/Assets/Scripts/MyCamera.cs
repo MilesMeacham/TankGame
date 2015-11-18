@@ -12,7 +12,7 @@ public class MyCamera : MonoBehaviour {
 
 	private Rigidbody2D cameraRigidbody;
 
-	public int moveSpeed = 5;
+	public float moveSpeed = 5;
 
 	// Use this for initialization
 	void Start () {

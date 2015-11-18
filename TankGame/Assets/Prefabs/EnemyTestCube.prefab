@@ -10,9 +10,12 @@ GameObject:
   - 4: {fileID: 488634}
   - 33: {fileID: 3345820}
   - 23: {fileID: 2386242}
-  - 61: {fileID: 6160936}
   - 50: {fileID: 5088112}
   - 114: {fileID: 11472538}
+  - 58: {fileID: 5818894}
+  - 114: {fileID: 11427916}
+  - 114: {fileID: 11421732}
+  - 114: {fileID: 11460880}
   m_Layer: 0
   m_Name: EnemyTestCube
   m_TagString: Enemy
@@ -20,6 +23,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &197266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 454372}
+  m_Layer: 0
+  m_Name: ShotStartPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &454372
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197266}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.949999988, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 488634}
+  m_RootOrder: 0
 --- !u!4 &488634
 Transform:
   m_ObjectHideFlags: 1
@@ -27,9 +57,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .940000057, y: -2.0999999, z: 0}
+  m_LocalPosition: {x: .939999998, y: -5.6500001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 454372}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!23 &2386242
@@ -42,7 +73,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b3021cd0035d742b383785ed3ff96f81, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -79,8 +110,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &6160936
-BoxCollider2D:
+--- !u!58 &5818894
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -91,7 +122,53 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Radius: .5
+--- !u!114 &11421732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4435afcfc0217742acdebb35ca8a10a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 15
+  maxHealth: 15
+  minHealth: 0
+--- !u!114 &11427916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0bb6fc754215e4b9e0220d42f30852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpForce: 0
+  verticalMoveSpeed: 0
+  rb: {fileID: 0}
+--- !u!114 &11460880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d5824e71bc36aa4dbca3d62b3f6665a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 0}
+  bulletPools: {fileID: 0}
+  moveSpeed: -20
+  damage: 3
+  bulletPenetration: 1
+  bulletTag: EnemyBullet
 --- !u!114 &11472538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,18 +180,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe9e410935b9b144bf8eeed25f69b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 0
-  bulletPools: {fileID: 0}
-  player: {fileID: 0}
-  enemyHealth: 20
-  enemyDamage: 5
-  enemyJumpForce: .800000012
-  enemyJumpTime: 100
-  enemyJumpTimeCounter: 0
+  theCharacterHealth: {fileID: 0}
   desiredDistanceFromPlayer: 10
   actualDistanceFromPlayer: 0
-  enemyMoveSpeed: 5
+  theCharacterMotor: {fileID: 0}
+  theCharacterShoot: {fileID: 0}
+  timedShot: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

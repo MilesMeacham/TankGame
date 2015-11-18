@@ -28,15 +28,18 @@ public class BulletMovement : MonoBehaviour {
 	{
 		bulletCollision++;
 		//if(other.gameObject.tag == "Deathzone" || other.gameObject.tag == "Enemy")
-		if(bulletCollision >= collisionLimit)
+		if (bulletCollision >= collisionLimit) 
+		{
 			gameObject.SetActive (false);
-		
+			bulletCollision = 0;
+		}
 	}
 
 	public IEnumerator BulletDestroyCo()
 	{
 
 		yield return new WaitForSeconds (bulletLifeSpan);
+		bulletCollision = 0;
 		gameObject.SetActive (false);
 
 	}
