@@ -7,6 +7,9 @@ public class BulletMovement : MonoBehaviour {
 	public float bulletLifeSpan = 2f;
 	public float bulletDamage;
 
+	private int bulletCollision;
+	public int collisionLimit = 2;
+
 
 	void Start () {
 		//StartCoroutine ("BulletDestroyCo");
@@ -23,7 +26,9 @@ public class BulletMovement : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if(other.gameObject.tag == "Deathzone" || other.gameObject.tag == "Enemy")
+		bulletCollision++;
+		//if(other.gameObject.tag == "Deathzone" || other.gameObject.tag == "Enemy")
+		if(bulletCollision >= collisionLimit)
 			gameObject.SetActive (false);
 		
 	}

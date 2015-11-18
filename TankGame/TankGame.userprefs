@@ -1,19 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Old\PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BulletMovement.cs">
     <Files>
-      <File FileName="Assets\Scripts\Inheritance\GroundEnemy.cs" Line="25" Column="2" />
-      <File FileName="Assets\Scripts\Inheritance\CharacterShoot.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BulletMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Inheritance\KeyboardInput.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Generation\ObjectPooler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Inheritance\EnemyBaseClass.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Inheritance\CharacterHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Inheritance\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="17" Column="3" />
-      <File FileName="Assets\Scripts\Inheritance\CharacterPlayer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Inheritance\EnemyFlying.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Old\PlayerController.cs" Line="40" Column="3" />
+      <File FileName="../../JuniorProj/GumBot/Assets/Modules/Level/Scripts/Level/planetGeneration.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BulletMovement.cs" Line="12" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
