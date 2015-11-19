@@ -18,13 +18,27 @@ public class CoinPickup : MonoBehaviour {
 	
 	}
 
-	void OnCollisionEnter2D (Collision2D other)
+	void OnTriggerEnter2D (Collider2D other)
 	{
 		if (other.gameObject.tag == "Player") 
 		{
 			theScoreManager.additionalScore += scoreToGive;
 			Destroy(gameObject);
 		}
-		
+
+		if (other.gameObject.layer == 8) 
+		{
+			GetComponent<Rigidbody2D> ().gravityScale = 0;
+			GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, 0);
+		}
+	}
+
+	void OnTriggerExit2D (Collider2D other)
+	{
+		if (other.gameObject.layer == 8) 
+		{
+			GetComponent<Rigidbody2D> ().gravityScale = 1;
+		}
+
 	}
 }
