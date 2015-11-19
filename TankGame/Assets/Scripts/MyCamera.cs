@@ -3,8 +3,6 @@ using System.Collections;
 
 public class MyCamera : MonoBehaviour {
 
-	public Player player;
-
 	//private Vector3 lastPosition;
 	private float distanceToMove;
 	//private float distanceUp;
@@ -20,8 +18,7 @@ public class MyCamera : MonoBehaviour {
 		cameraRigidbody = GetComponent<Rigidbody2D> ();
 		cameraRigidbody.gravityScale = 0;
 
-		player = FindObjectOfType<Player> ();
-
+	
 		//lastPosition = player.transform.position;
 	}
 	

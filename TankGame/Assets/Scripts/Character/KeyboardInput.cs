@@ -21,7 +21,7 @@ public class KeyboardInput : MonoBehaviour {
 	void Update()
 	{
 
-		if (Input.GetKeyDown (KeyCode.F))
+		if (Input.GetKey (KeyCode.F))
 			theCharacterShoot.Shooting (playerShotStartPos);
 	}
 

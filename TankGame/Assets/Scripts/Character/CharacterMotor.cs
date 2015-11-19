@@ -44,7 +44,6 @@ public class CharacterMotor : MonoBehaviour {
 		else if (other.gameObject.name == "DeathZoneDontLeave" && this.gameObject.tag == "Player")
 		{
 			theGameManager.RestartGame ();
-			print ("Getting Here");
 		}
 	}
 	

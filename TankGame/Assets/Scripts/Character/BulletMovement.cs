@@ -28,7 +28,7 @@ public class BulletMovement : MonoBehaviour {
 	{
 		bulletCollision++;
 		//if(other.gameObject.tag == "Deathzone" || other.gameObject.tag == "Enemy")
-		if (bulletCollision >= collisionLimit) 
+		if (bulletCollision > collisionLimit) 
 		{
 			gameObject.SetActive (false);
 			bulletCollision = 0;
