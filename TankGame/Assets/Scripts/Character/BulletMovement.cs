@@ -33,6 +33,18 @@ public class BulletMovement : MonoBehaviour {
 			gameObject.SetActive (false);
 			bulletCollision = 0;
 		}
+
+	}
+
+	void OnTriggerExit2D (Collider2D other)
+	{
+
+		if (other.gameObject.tag == "PlayableArea")
+		{
+			gameObject.SetActive (false);
+			bulletCollision = 0;
+		}
+
 	}
 
 	public IEnumerator BulletDestroyCo()
