@@ -4,6 +4,7 @@ using System.Collections;
 public class CharacterMotor : MonoBehaviour {
 	
 	public float moveSpeed;
+	public float adjustedSpeed = 0;
 	public float jumpForce;
 	public float verticalMoveSpeed;
 
@@ -22,7 +23,7 @@ public class CharacterMotor : MonoBehaviour {
 	//public void Movement (Rigidbody2D rb, float moveSpeed) {
 	public void Movement ()
 	{
-		rb.velocity = new Vector2 (moveSpeed, rb.velocity.y);
+		rb.velocity = new Vector2 (moveSpeed + adjustedSpeed, rb.velocity.y);
 	}
 
 	public void VerticalMovement ()

@@ -13,7 +13,19 @@ public class PowerUp : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		int rand = Random.Range (0, 4);
+
+		if (rand == 0)
+			damage = true;
+		else if (rand == 1)
+			shotSpeed = true;
+		else if (rand == 2) 
+		{
+			shotRate = true;
+			multiplyBy = 1.5f;
+		}
+		else 
+			moveSpeed = true;
 	}
 	
 	// Update is called once per frame

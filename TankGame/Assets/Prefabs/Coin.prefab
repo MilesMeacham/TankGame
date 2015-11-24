@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2304180}
   - 50: {fileID: 5003604}
   - 58: {fileID: 5893904}
-  - 114: {fileID: 11407982}
+  - 114: {fileID: 11494676}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.86000013, y: -3.0999999, z: 0}
+  m_LocalPosition: {x: 8.44999981, y: -1.42999995, z: 0}
   m_LocalScale: {x: .475086749, y: .475086749, z: .475086749}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42,7 +42,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: bde3486e238717045a0ac2fdf2f1f4b8, type: 2}
+  - {fileID: 2100000, guid: 1cadb634a61654f4e83a7532bf5dd22f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -92,7 +92,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .49999997
---- !u!114 &11407982
+--- !u!114 &11494676
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -100,10 +100,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 174350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 159198b11430aa14bbd8e1a1ff8a595b, type: 3}
+  m_Script: {fileID: 11500000, guid: bdc97add0315eab439f2f7bfd74a9ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreToGive: 5
+  multiplyBy: 2
+  damage: 0
+  shotSpeed: 0
+  shotRate: 0
+  moveSpeed: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

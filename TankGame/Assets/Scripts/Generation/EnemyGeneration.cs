@@ -27,7 +27,7 @@ public class EnemyGeneration : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		// Create platform if this object passes the "generationsPoint"
+		// Create enemy if this object passes the "generationsPoint"
 		if (transform.position.x < generationPoint.position.x && !spawningEnemies) {
 
 			transform.position = new Vector3 (transform.position.x + 10, transform.position.y, transform.position.z);
@@ -51,8 +51,14 @@ public class EnemyGeneration : MonoBehaviour {
 
 		for (int i = 0; i < enemiesToSpawn; i++) {
 
-			// Grab the platform to be placed
+			// Grab the enemy to be placed
 			GameObject newEnemy = objectPools[enemySelector].GetPooledObject();
+
+			if(i == enemiesToSpawn)
+			{
+				newEnemy.AddComponent<EnemyItemDrop>();
+			}
+
 
 			yield return new WaitForSeconds (0.5f);
 
