@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Generation\groundGeneration.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../JuniorProj/GumBot/Assets/Modules/Level/Scripts/Level/planetGeneration.cs">
     <Files>
-      <File FileName="Assets\Scripts\Generation\groundGeneration.cs" Line="57" Column="4" />
+      <File FileName="../../JuniorProj/GumBot/Assets/Modules/Level/Scripts/Level/planetGeneration.cs" Line="30" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
