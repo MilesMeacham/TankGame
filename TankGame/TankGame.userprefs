@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../JuniorProj/GumBot/Assets/Modules/Level/Scripts/Level/planetGeneration.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Generation/EnemyGeneration.cs">
     <Files>
-      <File FileName="../../JuniorProj/GumBot/Assets/Modules/Level/Scripts/Level/planetGeneration.cs" Line="30" Column="36" />
+      <File FileName="Assets/Scripts/Character/Enemy/GroundEnemy.cs" Line="20" Column="1" />
+      <File FileName="Assets/Scripts/Generation/EnemyGeneration.cs" Line="33" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

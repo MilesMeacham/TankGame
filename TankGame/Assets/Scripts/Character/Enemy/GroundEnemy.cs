@@ -11,11 +11,14 @@ public class GroundEnemy : EnemyBaseClass {
 
 	public bool timedShot;
 	private Transform enemyShotStartPos;
+
+	public GameObject player;
 	
 	// Use this for initialization
 	new void Start () {
 		base.Start();
 
+		player = GameObject.FindGameObjectWithTag("Player");
 		theCharacterMotor = GetComponent<CharacterMotor> ();
 		theCharacterShoot = GetComponent<CharacterShoot> ();
 

@@ -17,11 +17,22 @@ public class EnemyGeneration : MonoBehaviour {
 	
 	public int enemySpawnChance = 90;
 	private int randNumGen;
+
+	GameObject[] enemyCount;
 	
 	// Use this for initialization
 	void Start () {
 		generationPoint = GameObject.Find ("EnemyGenerationPoint").GetComponent<Transform> ();
 		
+	}
+
+	void Update () {
+		enemyCount = GameObject.FindGameObjectsWithTag("enemy");
+	//	if(!enemyCount)
+	//		spawningEnemies = false;
+	//	if(enemyCount)
+	//		spawningEnemies = true;
+
 	}
 	
 	// Update is called once per frame
@@ -44,7 +55,7 @@ public class EnemyGeneration : MonoBehaviour {
 
 	public IEnumerator EnemySpawnCo()
 	{
-		spawningEnemies = true;
+		//spawningEnemies = true;
 		int enemiesToSpawn = 4;
 
 
@@ -67,7 +78,8 @@ public class EnemyGeneration : MonoBehaviour {
 			newEnemy.SetActive (true);
 
 		}
-		spawningEnemies = false;
+
+		//spawningEnemies = false;
 
 
 
