@@ -27,7 +27,7 @@ public class EnemyGeneration : MonoBehaviour {
 	}
 
 	void Update () {
-		enemyCount = GameObject.FindGameObjectsWithTag("enemy");
+//		enemyCount = GameObject.FindGameObjectsWithTag("enemy");
 	//	if(!enemyCount)
 	//		spawningEnemies = false;
 	//	if(enemyCount)

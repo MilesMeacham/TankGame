@@ -16,6 +16,7 @@ public class ObjectPooler : MonoBehaviour {
 	void Start () {
 
 		parent = new GameObject ();
+		parent.transform.parent = GameObject.Find ("Foreground").transform;
 		parent.name = pooledObject.name + "s";
 		// Create a new list of GameObjects
 		pooledObjects = new List<GameObject> ();

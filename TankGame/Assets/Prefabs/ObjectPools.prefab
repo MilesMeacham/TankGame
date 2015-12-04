@@ -79,6 +79,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &198636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 427580}
+  - 114: {fileID: 11448926}
+  m_Layer: 0
+  m_Name: ItemPooler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &410038
 Transform:
   m_ObjectHideFlags: 1
@@ -91,6 +107,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 472548}
   m_RootOrder: 1
+--- !u!4 &427580
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.57401073, y: 2.29778004, z: -.1171875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 472548}
+  m_RootOrder: 4
 --- !u!4 &430010
 Transform:
   m_ObjectHideFlags: 1
@@ -129,6 +157,7 @@ Transform:
   - {fileID: 410038}
   - {fileID: 490288}
   - {fileID: 466354}
+  - {fileID: 427580}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &490288
@@ -154,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dcb4a3b164edc14ba30d779280daec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledObject: {fileID: 169522, guid: 28993f0d9cbddd54ba89eae43c4bf75c, type: 2}
+  pooledObject: {fileID: 130454, guid: 0aac239d0746bf04392f51d2b30083ed, type: 2}
   pooledAmount: 5
   parent: {fileID: 0}
 --- !u!114 &11427054
@@ -170,6 +199,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject: {fileID: 169522, guid: 55fd36bd151857c469ece267145a17a0, type: 2}
   pooledAmount: 5
+  parent: {fileID: 0}
+--- !u!114 &11448926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dcb4a3b164edc14ba30d779280daec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObject: {fileID: 163698, guid: f949abcc1e972324bb3ef1086fcf1c11, type: 2}
+  pooledAmount: 4
   parent: {fileID: 0}
 --- !u!114 &11486836
 MonoBehaviour:
