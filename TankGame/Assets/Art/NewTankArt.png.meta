@@ -1,11 +1,37 @@
 fileFormatVersion: 2
 guid: 8967ad4f02377e8428f76a5d00396e98
-timeCreated: 1449217596
+timeCreated: 1449473784
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: NewTankArt_0
     21300002: NewTankArt_1
+    21300004: NewTankArt_2
+    21300006: NewTankArt_3
+    21300008: NewTankArt_4
+    21300010: NewTankArt_5
+    21300012: NewTankArt_7
+    21300014: NewTankArt_6
+    21300016: NewTankArt_10
+    21300018: NewTankArt_8
+    21300020: CoinFront
+    21300022: NewTankArt_11
+    21300024: NewTankArt_12
+    21300026: NewTankArt_13
+    21300028: NewTankArt_14
+    21300030: NewTankArt_15
+    21300032: Mine_Bright
+    21300034: Mine_Med
+    21300036: Mine_Dim
+    21300038: Heart_Empty
+    21300040: Heart_Full
+    21300042: Heart_Half
+    21300044: BarbedWire_Ugly
+    21300046: CoinTurnRight
+    21300048: CoinTurnRight2
+    21300050: CoinSide
+    21300052: CoinTurnLeft2
+    21300054: CoinTurnLeft
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -55,20 +81,220 @@ TextureImporter:
     - name: NewTankArt_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 922
-        width: 155
+        x: 0
+        y: 925
+        width: 152
         height: 99
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 3, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: NewTankArt_1
       rect:
         serializedVersion: 2
-        x: 5
-        y: 722
-        width: 116
-        height: 122
+        x: 152
+        y: 925
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NewTankArt_2
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 925
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NewTankArt_3
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 925
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NewTankArt_4
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 925
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NewTankArt_5
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 925
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NewTankArt_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 826
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NewTankArt_7
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 826
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NewTankArt_8
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 826
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mine_Bright
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 778
+        width: 45
+        height: 9
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mine_Med
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 778
+        width: 45
+        height: 9
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mine_Dim
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 778
+        width: 45
+        height: 9
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Heart_Empty
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 776
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Heart_Full
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 776
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Heart_Half
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 776
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BarbedWire_Ugly
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 747
+        width: 54
+        height: 71
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoinFront
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 612
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoinTurnRight
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 612
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoinTurnRight2
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 613
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoinSide
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 612
+        width: 4
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoinTurnLeft2
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 612
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoinTurnLeft
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 612
+        width: 21
+        height: 29
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

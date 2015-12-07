@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d5eba1115789bf64a95db89c129706c5
-timeCreated: 1449117261
+timeCreated: 1449379840
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -11,6 +11,21 @@ TextureImporter:
     21300008: GroundArt_4
     21300010: GroundArt_5
     21300012: GroundArt_6
+    21300014: GroundArt_7
+    21300016: GroundArt_8
+    21300018: GroundArt_9
+    21300020: GroundArt_10
+    21300022: GroundArt_11
+    21300024: GroundArt_12
+    21300026: GroundArt_13
+    21300028: GroundArt_14
+    21300030: GroundArt_15
+    21300032: GroundArt_16
+    21300034: GroundArt_17
+    21300036: GroundArt_18
+    21300038: GroundArt_19
+    21300040: GroundArt_20
+    21300042: GroundArt_21
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -33,8 +48,8 @@ TextureImporter:
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 8192
+  textureFormat: -3
+  maxTextureSize: 2048
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -51,7 +66,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -61,69 +76,219 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 32
-        height: 32
+        y: 958
+        width: 116
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GroundArt_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 118
+        y: 958
+        width: 120
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GroundArt_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
+        x: 240
+        y: 958
+        width: 120
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GroundArt_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
+        x: 368
+        y: 958
+        width: 116
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GroundArt_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
+        x: 488
+        y: 958
+        width: 116
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GroundArt_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
+        x: 606
+        y: 958
+        width: 120
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GroundArt_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
+        x: 732
+        y: 958
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_7
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 958
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_8
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 958
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_9
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 958
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_10
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 958
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_11
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 958
+        width: 124
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_12
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 958
+        width: 124
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_13
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 958
+        width: 120
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_14
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 958
+        width: 120
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_15
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 830
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_16
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 830
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_17
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 830
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_18
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 830
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_19
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 830
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_20
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 830
+        width: 120
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GroundArt_21
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 830
+        width: 120
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

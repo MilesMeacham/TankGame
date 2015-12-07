@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
 
 
 	public string mainLevel;
 
+	public Image startButton;
+
 	public void PlayGame()
 	{
-		Application.LoadLevel (mainLevel);
+		StartCoroutine ("TextFlashCo");
 	}
 
 
@@ -16,4 +19,22 @@ public class MainMenu : MonoBehaviour {
 	{
 		Application.Quit ();
 	}
+
+	IEnumerator TextFlashCo()
+	{
+		startButton.enabled = false;
+		yield return new WaitForSeconds(0.3f);
+		startButton.enabled = true;
+		yield return new WaitForSeconds(0.3f);
+		startButton.enabled = false;
+		yield return new WaitForSeconds(0.3f);
+		startButton.enabled = true;
+		yield return new WaitForSeconds(0.3f);
+		startButton.enabled = false;
+		yield return new WaitForSeconds(0.3f);
+		startButton.enabled = true;
+		yield return new WaitForSeconds(0.3f);
+		Application.LoadLevel (mainLevel);
+	}
+
 }

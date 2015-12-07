@@ -12,13 +12,13 @@ public class GroundEnemy : EnemyBaseClass {
 	public bool timedShot;
 	private Transform enemyShotStartPos;
 
-	public GameObject player;
+	public GameObject thePlayer;
 	
 	// Use this for initialization
 	new void Start () {
 		base.Start();
 
-		player = GameObject.FindGameObjectWithTag("Player");
+		thePlayer = GameObject.FindGameObjectWithTag("Player");
 		theCharacterMotor = GetComponent<CharacterMotor> ();
 		theCharacterShoot = GetComponent<CharacterShoot> ();
 
@@ -27,7 +27,7 @@ public class GroundEnemy : EnemyBaseClass {
 	
 	void Update () {
 
-		actualDistanceFromPlayer = transform.position.x - player.transform.position.x;
+		actualDistanceFromPlayer = transform.position.x - thePlayer.transform.position.x;
 		
 	}
 	
@@ -45,9 +45,11 @@ public class GroundEnemy : EnemyBaseClass {
 	
 		theCharacterMotor.Movement ();
 		
-		if (actualDistanceFromPlayer < desiredDistanceFromPlayer)
+		if (actualDistanceFromPlayer < (desiredDistanceFromPlayer - 1))
 			theCharacterMotor.moveSpeed = 8;
-		else if (actualDistanceFromPlayer > desiredDistanceFromPlayer + 1)
+		else if (actualDistanceFromPlayer > desiredDistanceFromPlayer + 3)
+			theCharacterMotor.moveSpeed = -3;
+		else if (actualDistanceFromPlayer > desiredDistanceFromPlayer)
 			theCharacterMotor.moveSpeed = 3;
 		else
 			theCharacterMotor.moveSpeed = 5;

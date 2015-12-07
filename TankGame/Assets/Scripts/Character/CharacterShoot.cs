@@ -12,10 +12,16 @@ public class CharacterShoot : MonoBehaviour {
 
 	public float reloadTime = 0.5f;
 	public bool reloading;
+
+	public bool shotFired;
+
+	//public Animator theAnimator;
 	
 	void Start () 
 	{
 		bulletPools = GameObject.Find ("BulletPooler").GetComponent<ObjectPooler> ();
+
+		//theAnimator = GetComponentInChildren<Animator> ();
 	}
 	
 	
@@ -31,6 +37,9 @@ public class CharacterShoot : MonoBehaviour {
 
 		if (!reloading) 
 		{
+			shotFired = true;
+			//theAnimator.SetBool ("Shot", shotFired);
+
 			bullet = bulletPools.GetPooledObject ();
 			bullet.GetComponent<BulletMovement> ().bulletMoveSpeed = moveSpeed;
 			bullet.GetComponent<BulletMovement> ().bulletDamage = damage;
@@ -40,6 +49,7 @@ public class CharacterShoot : MonoBehaviour {
 			bullet.transform.rotation = shotStartPos.transform.rotation;
 			bullet.SetActive (true);
 			reloading = true;
+
 			StartCoroutine("ReloadingCo");
 		}
 
@@ -50,5 +60,6 @@ public class CharacterShoot : MonoBehaviour {
 	{
 		yield return new WaitForSeconds (reloadTime);
 		reloading = false;
+
 	}
 }

@@ -45,7 +45,9 @@ public class CharacterPlayer : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "EnemyBullet")
 			theCharacterHealth.removeHealth(other.GetComponent<BulletMovement>().bulletDamage);
-		
+
+		if (other.gameObject.tag == "Hazard")
+			theCharacterHealth.removeHealth(other.GetComponent<Hazard>().damage);
 		
 	}
 	

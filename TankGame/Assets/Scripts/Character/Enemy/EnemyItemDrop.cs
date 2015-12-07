@@ -15,6 +15,8 @@ public class EnemyItemDrop : MonoBehaviour {
 	private float characterHealth;
 	private Vector3 position;
 
+	public ObjectPooler theCoinPooler;
+
 
 	// Use this for initialization
 	void Start () 
@@ -23,19 +25,26 @@ public class EnemyItemDrop : MonoBehaviour {
 		numbOfCoins = Random.Range (2, 4);
 		dropChance = Random.Range (0, 100);
 		enemyPosition = GetComponent<Transform> ();
+
+		theCoinPooler = GameObject.Find ("CoinPooler").GetComponent<ObjectPooler> ();
+
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	public void ItemDrop () 
 	{
-		characterHealth = GetComponent<CharacterHealth> ().health;
-		if (characterHealth <= 0) 
+		//characterHealth = GetComponent<CharacterHealth> ().health;
+		if (GetComponent<CharacterHealth> ().health <= 0) 
 		{
 
 			position = enemyPosition.position;
 			for (int i = 0; i < numbOfCoins; i++) 
 			{
-				Instantiate (coinsToDrop, position, Quaternion.identity);
+				GameObject newCoin = theCoinPooler.GetPooledObject();
+				
+				newCoin.transform.position = transform.position;
+				newCoin.transform.rotation = transform.rotation;
+				newCoin.SetActive(true);
 			}
 
 			if (powerUpChance > dropChance)

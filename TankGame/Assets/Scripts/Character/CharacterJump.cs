@@ -15,6 +15,8 @@ public class CharacterJump : MonoBehaviour {
 	private Collider2D groundCheck;
 	private GameObject groundCheckObj;
 
+	public float hoverRefillSpeed = 1;
+
 	public void Start () 
 	{
 		theCharacterMotor = GetComponent<CharacterMotor> ();
@@ -45,7 +47,7 @@ public class CharacterJump : MonoBehaviour {
 	void HoverRefill() {
 		
 		if (grounded && jumpTimeCounter < jumpTime)
-			jumpTimeCounter += Time.deltaTime;
+			jumpTimeCounter += Time.deltaTime * hoverRefillSpeed;
 		
 		if (jumpTimeCounter > jumpTime)
 			jumpTimeCounter = jumpTime;

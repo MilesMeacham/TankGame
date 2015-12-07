@@ -37,6 +37,7 @@ public class PowerUp : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Player") 
 		{
+			print ("Getting Here");
 			if(damage)
 				other.gameObject.GetComponent<CharacterShoot>().damage += multiplyBy;
 

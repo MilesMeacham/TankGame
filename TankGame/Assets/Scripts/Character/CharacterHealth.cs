@@ -6,7 +6,11 @@ public class CharacterHealth : MonoBehaviour {
 	public float health;
 	public float maxHealth;
 	public float minHealth;
-	
+
+	public void Start () {
+		health = maxHealth;
+	}
+
 	public void Update () {
 
 		if (health == minHealth)
@@ -45,7 +49,13 @@ public class CharacterHealth : MonoBehaviour {
 	{
 		gameObject.SetActive (false);
 
-		health = maxHealth;
+		if(gameObject.layer == 10)
+		{
+			EnemyItemDrop theEnemy = GetComponent<EnemyItemDrop>();
+			theEnemy.ItemDrop();
+			health = maxHealth;
+
+		}
 
 	}
 

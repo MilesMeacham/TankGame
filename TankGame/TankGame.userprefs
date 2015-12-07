@@ -1,12 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Character\CharacterPlayer.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\JuniorProject\GumBot\Assets\Modules\Player\Scripts\touchControls.cs">
     <Files>
-      <File FileName="Assets\Scripts\Generation\ObjectPooler.cs" Line="19" Column="59" />
-      <File FileName="Assets\Scripts\Generation\EnemyGeneration.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Character\Enemy\GroundEnemy.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Character\CharacterMotor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Character\CharacterPlayer.cs" Line="1" Column="1" />
+      <File FileName="..\..\JuniorProject\GumBot\Assets\Modules\Player\Scripts\touchControls.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

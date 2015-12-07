@@ -23,7 +23,7 @@ public class CoinPickup : MonoBehaviour {
 		if (other.gameObject.tag == "Player") 
 		{
 			theScoreManager.additionalScore += scoreToGive;
-			Destroy(gameObject);
+			gameObject.SetActive (false);
 		}
 
 		if (other.gameObject.layer == 8) 

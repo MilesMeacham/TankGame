@@ -34,6 +34,17 @@ public class groundGeneration : MonoBehaviour {
 	public GameObject newPlatform;
 	public GameObject newObstacle;
 
+	public float randMineThreshold;
+	public ObjectPooler theMinePool;
+
+	public float randEnemyThreshold;
+	public ObjectPooler theEnemyPool;
+
+	public float randBarbedThreshold;
+	public ObjectPooler theBarbedPool;
+
+	public bool alreadySpawned;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -85,12 +96,52 @@ public class groundGeneration : MonoBehaviour {
 				newPlatform.transform.position = transform.position;
 				newPlatform.transform.rotation = transform.rotation;
 				newPlatform.SetActive (true);
+
+				if(Random.Range(0f, 100f) < randMineThreshold)
+				{
+					GameObject newMine = theMinePool.GetPooledObject();
+
+					Vector3 minePosition = new Vector3 (0f, 0.8f, 0f);
+
+					newMine.transform.position = transform.position + minePosition;
+					newMine.transform.rotation = transform.rotation;
+					newMine.SetActive(true);
+
+					alreadySpawned = true;
+
+				}
+
+				if(Random.Range(0f, 100f) < randEnemyThreshold && !alreadySpawned)
+				{
+					GameObject newEnemy = theEnemyPool.GetPooledObject();
+					
+					Vector3 enemyPosition = new Vector3 (0f, 1f, 0f);
+					
+					newEnemy.transform.position = transform.position + enemyPosition;
+					newEnemy.transform.rotation = transform.rotation;
+					newEnemy.SetActive(true);
+
+					alreadySpawned = true;
+					
+				}
+
+				if(Random.Range(0f, 100f) < randBarbedThreshold && !alreadySpawned)
+				{
+					GameObject newBarbed = theBarbedPool.GetPooledObject();
+					
+					Vector3 barbedPosition = new Vector3 (0f, 0.8f, 0f);
+					
+					newBarbed.transform.position = transform.position + barbedPosition;
+					newBarbed.transform.rotation = transform.rotation;
+					newBarbed.SetActive(true);
+					
+				}
 				
 				transform.position = new Vector3 (transform.position.x + (platformWidths[platformSelector] / 2), transform.position.y, transform.position.z);
 				
 				distanceBetween = 0;
 				
-
+				alreadySpawned = false;
 
 			}
 			else

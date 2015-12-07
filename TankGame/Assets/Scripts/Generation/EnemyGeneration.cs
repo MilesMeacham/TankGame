@@ -13,7 +13,7 @@ public class EnemyGeneration : MonoBehaviour {
 	
 	public ObjectPooler[] objectPools;
 
-	private bool spawningEnemies;
+	private bool spawningEnemies = false;
 	
 	public int enemySpawnChance = 90;
 	private int randNumGen;
@@ -55,7 +55,7 @@ public class EnemyGeneration : MonoBehaviour {
 
 	public IEnumerator EnemySpawnCo()
 	{
-		//spawningEnemies = true;
+		spawningEnemies = true;
 		int enemiesToSpawn = 4;
 
 
@@ -79,7 +79,7 @@ public class EnemyGeneration : MonoBehaviour {
 
 		}
 
-		//spawningEnemies = false;
+		spawningEnemies = false;
 
 
 

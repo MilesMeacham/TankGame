@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &181210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 458202}
+  - 114: {fileID: 11452734}
+  m_Layer: 0
+  m_Name: FloorGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &458202
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181210}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.5, y: -7.13999891, z: .5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11452734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71993b393e9323f46a1b6fb47a73d3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platform: {fileID: 0}
+  generationsPoint: {fileID: 0}
+  distanceBetweenMin: 0
+  distanceBetweenMax: 0
+  theObstacles:
+  - {fileID: 164876, guid: b96907411ea689643bb0d97276dc1b31, type: 2}
+  - {fileID: 137066, guid: 228c938ee1ca0d04ab02a43b89521272, type: 2}
+  - {fileID: 140932, guid: 18ec31433ee64a649a2c75050529b6dc, type: 2}
+  - {fileID: 171498, guid: c1cd96b89e2f1ce4bb9bd60926d27308, type: 2}
+  obstacleTime: 1
+  objectPools:
+  - {fileID: 0}
+  gapChanceGen: 0
+  newPlatform: {fileID: 0}
+  newObstacle: {fileID: 0}
+  randMineThreshold: 10
+  theMinePool: {fileID: 0}
+  randEnemyThreshold: 15
+  theEnemyPool: {fileID: 0}
+  randBarbedThreshold: 10
+  theBarbedPool: {fileID: 0}
+  alreadySpawned: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 181210}
+  m_IsPrefabParent: 1
