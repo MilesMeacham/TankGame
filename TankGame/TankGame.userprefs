@@ -1,8 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\JuniorProject\GumBot\Assets\Modules\Player\Scripts\touchControls.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameManager.cs">
     <Files>
-      <File FileName="..\..\JuniorProject\GumBot\Assets\Modules\Player\Scripts\touchControls.cs" Line="1" Column="1" />
+      <File FileName="Assets\TouchControls.cs" Line="44" Column="33" />
+      <File FileName="Assets\Scripts\Character\CharacterMotor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character\KeyboardInput.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="70" Column="102" />
+      <File FileName="Assets\Scripts\UI\DeathMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Old\PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets\BarbedWire.cs" Line="14" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

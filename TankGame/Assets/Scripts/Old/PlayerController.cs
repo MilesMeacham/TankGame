@@ -28,8 +28,12 @@ public class PlayerController : MonoBehaviour {
 	public GameObject bullets;
 	public ObjectPooler bulletPools;
 
+	private CharacterHealth theCharacterHealth;
+
 	// Use this for initialization
 	void Start () {
+
+		theCharacterHealth = GetComponent<CharacterHealth> ();
 
 		shotStartPos = transform.FindChild ("ShotStartPos").gameObject.GetComponent<Transform> ();
 
@@ -60,6 +64,9 @@ public class PlayerController : MonoBehaviour {
 			
 		if (Input.GetKeyDown (KeyCode.F) || Input.GetKey (KeyCode.Mouse1))
 			Shooting ();
+
+		if (theCharacterHealth.health == 0)
+			gameManager.RestartGame();
 
 	}
 

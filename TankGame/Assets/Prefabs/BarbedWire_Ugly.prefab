@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11405406}
   - 50: {fileID: 5006758}
   - 114: {fileID: 11403146}
+  - 114: {fileID: 11455746}
   m_Layer: 0
   m_Name: BarbedWire_Ugly
   m_TagString: Untagged
@@ -92,6 +93,18 @@ MonoBehaviour:
   jumpForce: 0
   verticalMoveSpeed: 0
   rb: {fileID: 0}
+--- !u!114 &11455746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730799b4368ac1346a13545e9d7a92f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destructionPoint: {fileID: 0}
 --- !u!114 &11457296
 MonoBehaviour:
   m_ObjectHideFlags: 1

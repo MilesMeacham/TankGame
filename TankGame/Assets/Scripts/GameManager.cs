@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour {
 
 	public DeathMenu gameOverScreen;
 
-
+	public bool restarted;
 	// Use this for initialization
 	void Start () {
 	
@@ -41,6 +41,13 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+		if (player.GetComponent<CharacterHealth> ().health == 0) 
+		{
+			restarted = true;
+			RestartGame ();
+
+
+		}
 	}
 
 	public void RestartGame()
@@ -60,7 +67,7 @@ public class GameManager : MonoBehaviour {
 		for (int i = 0; i < platformList.Length; i++)
 			platformList [i].gameObject.SetActive (false);
 		
-
+		player.GetComponent<CharacterHealth> ().health = player.GetComponent<CharacterHealth> ().maxHealth;
 		cameraController.transform.position = cameraStartPoint;
 		player.transform.position = playerStartPoint;
 		//player.GetComponent<CharacterHealth> ().health = GetComponent<CharacterHealth> ().maxHealth;
@@ -70,6 +77,7 @@ public class GameManager : MonoBehaviour {
 		theScoreManager.scoreCount = 0;
 		theScoreManager.additionalScore = 0;
 		theScoreManager.scoreIncrease = true;
+		restarted = false;
 	}
 
 /*
