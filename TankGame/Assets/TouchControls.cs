@@ -6,7 +6,7 @@ public class TouchControls : MonoBehaviour {
 	private CharacterShoot theCharacterShoot;
 	private CharacterJump theCharacterJump;
 	private CharacterMotor theCharacterMotor;
-
+	
 	public Transform playerShotStartPos;
 	// Use this for initialization
 	void Start () {
@@ -18,26 +18,31 @@ public class TouchControls : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if (Input.touchCount == 1)
+		if (Input.touchCount > 0)
 		{
-			var touch = Input.touches[0];
-
-			if (touch.position.x > Screen.width/2)
+			Touch[] myTouches = Input.touches;
+			for(int i = 0; i < Input.touchCount; i++)
 			{
-				theCharacterShoot.Shooting (playerShotStartPos);
+				if (myTouches[i].position.x > Screen.width/2)
+				{
+					theCharacterShoot.Shooting (playerShotStartPos);
+				}
 			}
 		}
-
-
+	
 
 	}
 
 	void FixedUpdate () {
-		if (Input.touchCount == 1) 
+		if (Input.touchCount > 0) 
 		{
-			var touch = Input.touches [0];
-			if (touch.position.x < Screen.width / 2) {
-				theCharacterJump.Jumping ();
+			Touch[] myTouches = Input.touches;
+			for(int i = 0; i < Input.touchCount; i++)
+			{
+				if (myTouches[i].position.x < Screen.width / 2)
+				{
+					theCharacterJump.Jumping ();
+				}
 			}
 		}
 

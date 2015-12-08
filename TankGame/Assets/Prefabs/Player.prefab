@@ -64,6 +64,7 @@ GameObject:
   - 58: {fileID: 5808394}
   - 61: {fileID: 6175014}
   - 61: {fileID: 6166478}
+  - 114: {fileID: 11473176}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -381,13 +382,16 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11411170
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147966}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16cb33c7a1aeeca479a1432df3a662d0, type: 3}
   m_Name: 
@@ -447,11 +451,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a0bb6fc754215e4b9e0220d42f30852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 7
   adjustedSpeed: 0
   jumpForce: .800000012
   verticalMoveSpeed: 0
   rb: {fileID: 0}
+  theCharacterHealth: {fileID: 11400578}
+--- !u!114 &11473176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a779a30fdce224d8e0b2787ea22641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerShotStartPos: {fileID: 477348}
 --- !u!114 &11497062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -467,9 +484,9 @@ MonoBehaviour:
   bulletPools: {fileID: 0}
   moveSpeed: 20
   damage: 1
-  bulletPenetration: 2
+  bulletPenetration: 0
   bulletTag: PlayerBullet
-  reloadTime: .5
+  reloadTime: .400000006
   reloading: 0
   shotFired: 0
 --- !u!114 &11498924

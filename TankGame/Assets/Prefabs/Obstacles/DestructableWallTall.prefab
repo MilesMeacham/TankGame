@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11479146}
   m_Layer: 8
   m_Name: BrickWallDestructable (1)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +37,7 @@ GameObject:
   - 114: {fileID: 11492322}
   m_Layer: 8
   m_Name: BrickWallDestructable (7)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ GameObject:
   - 114: {fileID: 11438170}
   m_Layer: 8
   m_Name: BrickWallDestructable (6)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,7 @@ GameObject:
   - 114: {fileID: 11499028}
   m_Layer: 8
   m_Name: BrickWallDestructable (4)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ GameObject:
   - 114: {fileID: 11441322}
   m_Layer: 8
   m_Name: BrickWallDestructable (3)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ GameObject:
   - 114: {fileID: 11484828}
   m_Layer: 8
   m_Name: BrickWallDestructable (2)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +142,7 @@ GameObject:
   - 114: {fileID: 11471304}
   m_Layer: 8
   m_Name: BrickWallDestructable
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +163,7 @@ GameObject:
   - 114: {fileID: 11466748}
   m_Layer: 8
   m_Name: BrickWallDestructable (5)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -557,6 +557,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11426394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -583,6 +586,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11438170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -627,6 +633,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11445792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -653,6 +662,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11460614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -679,6 +691,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11466748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -735,6 +750,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11476872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -776,6 +794,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11484828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -817,6 +838,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11492322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1081,6 +1105,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: maxHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Destructable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

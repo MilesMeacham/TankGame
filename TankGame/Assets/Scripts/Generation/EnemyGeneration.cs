@@ -19,11 +19,17 @@ public class EnemyGeneration : MonoBehaviour {
 	private int randNumGen;
 
 	GameObject[] enemyCount;
-	
+
+	public float randEnemyThreshold;
+	public ObjectPooler theEnemyPool;
+
+	public float maxTimeNoEnemy = 5f;
+	public float timeSinceLastSpawn;
+
 	// Use this for initialization
 	void Start () {
 		generationPoint = GameObject.Find ("EnemyGenerationPoint").GetComponent<Transform> ();
-		
+		timeSinceLastSpawn = maxTimeNoEnemy;
 	}
 
 	void Update () {
@@ -51,6 +57,21 @@ public class EnemyGeneration : MonoBehaviour {
 				StartCoroutine("EnemySpawnCo");
 		}
 
+		if(Random.Range(0f, 100f) < randEnemyThreshold || timeSinceLastSpawn <= 0)
+		{
+			GameObject newEnemy = theEnemyPool.GetPooledObject();
+			
+			Vector3 enemyPosition = new Vector3 (0f, 0f, 0f);
+			
+			newEnemy.transform.position = transform.position + enemyPosition;
+			newEnemy.transform.rotation = transform.rotation;
+			newEnemy.SetActive(true);
+
+			timeSinceLastSpawn = maxTimeNoEnemy;
+		}
+
+		timeSinceLastSpawn -= Time.deltaTime;
+
 	}
 
 	public IEnumerator EnemySpawnCo()
@@ -63,19 +84,19 @@ public class EnemyGeneration : MonoBehaviour {
 		for (int i = 0; i < enemiesToSpawn; i++) {
 
 			// Grab the enemy to be placed
-			GameObject newEnemy = objectPools[enemySelector].GetPooledObject();
+			GameObject newFlyingEnemy = objectPools[enemySelector].GetPooledObject();
 
 			if(i == enemiesToSpawn)
 			{
-				newEnemy.AddComponent<EnemyItemDrop>();
+				newFlyingEnemy.AddComponent<EnemyItemDrop>();
 			}
 
 
 			yield return new WaitForSeconds (0.5f);
 
-			newEnemy.transform.position = generationPoint.position;
-			newEnemy.transform.rotation = generationPoint.rotation;
-			newEnemy.SetActive (true);
+			newFlyingEnemy.transform.position = generationPoint.position;
+			newFlyingEnemy.transform.rotation = generationPoint.rotation;
+			newFlyingEnemy.SetActive (true);
 
 		}
 

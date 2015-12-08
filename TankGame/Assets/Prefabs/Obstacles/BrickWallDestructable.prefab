@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11412420}
   m_Layer: 8
   m_Name: BrickWallDestructable
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +103,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!212 &21287324
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -143,6 +146,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: maxHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Destructable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

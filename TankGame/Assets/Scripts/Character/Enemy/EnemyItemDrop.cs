@@ -5,10 +5,12 @@ public class EnemyItemDrop : MonoBehaviour {
 
 
 	public GameObject itemToDrop;
-
+	public GameObject heartToDrop;
 	public GameObject coinsToDrop;
+
 	public int numbOfCoins;
 	public int powerUpChance = 50;
+	public int heartChance = 5;
 	private int dropChance;
 
 	private Transform enemyPosition;
@@ -30,6 +32,7 @@ public class EnemyItemDrop : MonoBehaviour {
 
 	}
 	
+
 	// Update is called once per frame
 	public void ItemDrop () 
 	{
@@ -38,6 +41,7 @@ public class EnemyItemDrop : MonoBehaviour {
 		{
 
 			position = enemyPosition.position;
+
 			for (int i = 0; i < numbOfCoins; i++) 
 			{
 				GameObject newCoin = theCoinPooler.GetPooledObject();
@@ -49,6 +53,9 @@ public class EnemyItemDrop : MonoBehaviour {
 
 			if (powerUpChance > dropChance)
 				Instantiate (itemToDrop, position, Quaternion.identity);
+
+			if(Random.Range(0f, 5f) < heartChance)
+				Instantiate (heartToDrop, position, Quaternion.identity);
 		}
 	}
 

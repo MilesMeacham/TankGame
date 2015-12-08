@@ -12,12 +12,12 @@ GameObject:
   - 23: {fileID: 2386242}
   - 50: {fileID: 5088112}
   - 114: {fileID: 11472538}
-  - 58: {fileID: 5818894}
   - 114: {fileID: 11427916}
   - 114: {fileID: 11421732}
   - 114: {fileID: 11460880}
   - 114: {fileID: 11456346}
   - 114: {fileID: 11424126}
+  - 61: {fileID: 6177062}
   m_Layer: 10
   m_Name: EnemyTestCube
   m_TagString: Enemy
@@ -59,8 +59,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.30496359, y: -4.35553598, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.3687005, y: -2.08999991, z: 0}
+  m_LocalScale: {x: 1.96343768, y: 1.46249974, z: 1}
   m_Children:
   - {fileID: 454372}
   m_Father: {fileID: 0}
@@ -112,19 +112,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &5818894
-CircleCollider2D:
+--- !u!61 &6177062
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159212}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 6b81cc6bce1ffeb45bed31e374f28fce, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: .5
+  m_Size: {x: 1, y: 1}
 --- !u!114 &11421732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,9 +136,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4435afcfc0217742acdebb35ca8a10a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  maxHealth: 3
+  health: 5
+  maxHealth: 5
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11424126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,6 +170,7 @@ MonoBehaviour:
   jumpForce: 0
   verticalMoveSpeed: 0
   rb: {fileID: 0}
+  theCharacterHealth: {fileID: 11421732}
 --- !u!114 &11456346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,9 +183,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: {fileID: 144700, guid: 8c47fde0a07dd71418342a5260b810dd, type: 2}
+  heartToDrop: {fileID: 103806, guid: 47e8a9d9da2f05e468ce3b8f665ca45c, type: 2}
   coinsToDrop: {fileID: 174350, guid: 45cfd856859c40c49a7e65276f5ff101, type: 2}
   numbOfCoins: 0
-  powerUpChance: 50
+  powerUpChance: 0
+  heartChance: 2
   theCoinPooler: {fileID: 0}
 --- !u!114 &11460880
 MonoBehaviour:
@@ -234,11 +240,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: maxHealth
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: health
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: coinsToDrop
@@ -251,6 +257,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: heartToDrop
+      value: 
+      objectReference: {fileID: 103806, guid: 47e8a9d9da2f05e468ce3b8f665ca45c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: heartChance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: theCharacterHealth
+      value: 
+      objectReference: {fileID: 11421732}
+    - target: {fileID: 0}
+      propertyPath: powerUpChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

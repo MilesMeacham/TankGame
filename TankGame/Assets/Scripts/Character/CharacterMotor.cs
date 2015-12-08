@@ -10,13 +10,13 @@ public class CharacterMotor : MonoBehaviour {
 
 	public Rigidbody2D rb;
 
-	private CharacterHealth theCharacterHealth;
+	public CharacterHealth theCharacterHealth;
 	private GameManager theGameManager;
 
 	void Start (){
 
 		rb = GetComponent<Rigidbody2D>();
-		theCharacterHealth = GetComponent<CharacterHealth> ();
+		//theCharacterHealth = GetComponent<CharacterHealth> ();
 		theGameManager = FindObjectOfType<GameManager> ();
 	}
 
@@ -36,6 +36,19 @@ public class CharacterMotor : MonoBehaviour {
 		rb.velocity = new Vector2 (rb.velocity.x, rb.velocity.y + jumpForce);
 	}
 
+	void OnTriggerEnter2D (Collider2D other)
+	{
+		if (other.gameObject.tag == "Deathzone" && this.gameObject.tag != "Player") 
+		{
+			theCharacterHealth.destroyObject();
+		} 
+		else if (other.gameObject.tag == "Deathzone" && this.gameObject.tag == "Player")
+		{
+			theGameManager.RestartGame ();
+		}
+	}
+
+	/*
 	void OnTriggerExit2D (Collider2D other)
 	{
 		if (other.gameObject.name == "DeathZoneDontLeave" && this.gameObject.tag != "Player") 
@@ -47,7 +60,7 @@ public class CharacterMotor : MonoBehaviour {
 			theGameManager.RestartGame ();
 		}
 	}
-	
+	*/
 
 
 }

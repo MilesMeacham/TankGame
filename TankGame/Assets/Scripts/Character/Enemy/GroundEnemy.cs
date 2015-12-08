@@ -23,6 +23,8 @@ public class GroundEnemy : EnemyBaseClass {
 		theCharacterShoot = GetComponent<CharacterShoot> ();
 
 		enemyShotStartPos = transform.FindChild ("ShotStartPos").gameObject.GetComponent<Transform> ();
+
+
 	}
 	
 	void Update () {

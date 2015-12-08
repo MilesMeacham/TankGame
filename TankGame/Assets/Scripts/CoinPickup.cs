@@ -22,8 +22,12 @@ public class CoinPickup : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Player") 
 		{
+			if(GetComponent<CoinSpread>().moved != null)
+				GetComponent<CoinSpread>().moved = false;
+
 			theScoreManager.additionalScore += scoreToGive;
 			gameObject.SetActive (false);
+
 		}
 
 		if (other.gameObject.layer == 8) 
@@ -33,12 +37,5 @@ public class CoinPickup : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerExit2D (Collider2D other)
-	{
-		if (other.gameObject.layer == 8) 
-		{
-			GetComponent<Rigidbody2D> ().gravityScale = 1;
-		}
 
-	}
 }

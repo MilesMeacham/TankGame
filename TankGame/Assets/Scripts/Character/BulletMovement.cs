@@ -35,6 +35,14 @@ public class BulletMovement : MonoBehaviour {
 			bulletCollision = 0;
 		}
 
+		if (other.gameObject.tag == "Deathzone")
+			gameObject.SetActive (false);
+
+		if (other.gameObject.tag == "Destructable") 
+		{
+			gameObject.SetActive (false);
+		}
+
 	}
 
 	void OnTriggerExit2D (Collider2D other)

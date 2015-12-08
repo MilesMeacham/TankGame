@@ -110,7 +110,7 @@ public class groundGeneration : MonoBehaviour {
 					alreadySpawned = true;
 
 				}
-
+/*
 				if(Random.Range(0f, 100f) < randEnemyThreshold && !alreadySpawned)
 				{
 					GameObject newEnemy = theEnemyPool.GetPooledObject();
@@ -124,7 +124,7 @@ public class groundGeneration : MonoBehaviour {
 					alreadySpawned = true;
 					
 				}
-
+*/
 				if(Random.Range(0f, 100f) < randBarbedThreshold && !alreadySpawned)
 				{
 					GameObject newBarbed = theBarbedPool.GetPooledObject();

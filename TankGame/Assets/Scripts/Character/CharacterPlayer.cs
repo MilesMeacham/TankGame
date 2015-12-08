@@ -9,6 +9,7 @@ public class CharacterPlayer : MonoBehaviour {
 	private GameObject thePlayerDesiredPoint;
 	
 	public bool adjustedSpeed;
+
 	
 	// Use this for initialization
 	public void Start () 
@@ -43,13 +44,26 @@ public class CharacterPlayer : MonoBehaviour {
 	
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (other.gameObject.tag == "EnemyBullet")
-			theCharacterHealth.removeHealth(other.GetComponent<BulletMovement>().bulletDamage);
+		if (!GetComponent<CharacterHealth>().invincible) {
 
-		if (other.gameObject.tag == "Hazard")
-			theCharacterHealth.removeHealth(other.GetComponent<Hazard>().damage);
-		
+			if (other.gameObject.tag == "EnemyBullet")
+			{
+				theCharacterHealth.removeHealth (other.GetComponent<BulletMovement> ().bulletDamage);
+				theCharacterHealth.Invincibility();
+			}
+
+
+			if (other.gameObject.tag == "Hazard")
+			{
+				theCharacterHealth.removeHealth (other.GetComponent<Hazard> ().damage);
+				theCharacterHealth.Invincibility();
+			}
+
+
+		}
 	}
+
+
 	
 	
 }

@@ -77,6 +77,9 @@ MonoBehaviour:
   health: 15
   maxHealth: 15
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11405406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -93,6 +96,7 @@ MonoBehaviour:
   jumpForce: 0
   verticalMoveSpeed: 0
   rb: {fileID: 0}
+  theCharacterHealth: {fileID: 11403146}
 --- !u!114 &11455746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,7 +155,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: theCharacterHealth
+      value: 
+      objectReference: {fileID: 11403146}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 130128}

@@ -47,6 +47,11 @@
   <ItemGroup>
      <Compile Include="Assets\BarbedWire.cs" />
      <Compile Include="Assets\BrickWallChange.cs" />
+     <Compile Include="Assets\CoinSpread.cs" />
+     <Compile Include="Assets\ColliderCreator.cs" />
+     <Compile Include="Assets\FadeOutButton.cs" />
+     <Compile Include="Assets\HeartPickup.cs" />
+     <Compile Include="Assets\PlayableAreaScript.cs" />
      <Compile Include="Assets\Scripts\Character\BulletMovement.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterHUD.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterHealth.cs" />
@@ -80,6 +85,7 @@
      <Compile Include="Assets\Scripts\UI\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\UI\UIHealth.cs" />
      <Compile Include="Assets\TouchControls.cs" />
+     <Compile Include="Assets\deathzonePosition.cs" />
      <Compile Include="Assets\playerAnimation.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>Z:/Programs/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

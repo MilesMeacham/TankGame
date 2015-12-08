@@ -62,6 +62,11 @@ public class GameManager : MonoBehaviour {
 
 	public void ResetGame()
 	{
+		theScoreManager.scoreCount = 0;
+		theScoreManager.additionalScore = 0;
+		theScoreManager.scoreIncrease = true;
+		Application.LoadLevel (1);
+		/*
 		gameOverScreen.gameObject.SetActive (false);
 		platformList = FindObjectsOfType<levelDestruction> ();
 		for (int i = 0; i < platformList.Length; i++)
@@ -78,6 +83,7 @@ public class GameManager : MonoBehaviour {
 		theScoreManager.additionalScore = 0;
 		theScoreManager.scoreIncrease = true;
 		restarted = false;
+		*/
 	}
 
 /*

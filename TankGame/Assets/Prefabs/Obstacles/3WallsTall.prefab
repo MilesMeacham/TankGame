@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11416352}
   m_Layer: 8
   m_Name: BrickWallDestructable (7)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +37,7 @@ GameObject:
   - 114: {fileID: 11429720}
   m_Layer: 8
   m_Name: BrickWallDestructable (3)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ GameObject:
   - 114: {fileID: 11499890}
   m_Layer: 8
   m_Name: BrickWallDestructable (6)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - 114: {fileID: 11429838}
   m_Layer: 8
   m_Name: BrickWallDestructable (7)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +163,7 @@ GameObject:
   - 114: {fileID: 11451200}
   m_Layer: 8
   m_Name: BrickWallDestructable (2)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +200,7 @@ GameObject:
   - 114: {fileID: 11494932}
   m_Layer: 8
   m_Name: BrickWallDestructable (4)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,7 +221,7 @@ GameObject:
   - 114: {fileID: 11419222}
   m_Layer: 8
   m_Name: BrickWallDestructable (1)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,7 +242,7 @@ GameObject:
   - 114: {fileID: 11470978}
   m_Layer: 8
   m_Name: BrickWallDestructable (2)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -295,7 +295,7 @@ GameObject:
   - 114: {fileID: 11448754}
   m_Layer: 8
   m_Name: BrickWallDestructable (1)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -316,7 +316,7 @@ GameObject:
   - 114: {fileID: 11406748}
   m_Layer: 8
   m_Name: BrickWallDestructable (4)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337,7 +337,7 @@ GameObject:
   - 114: {fileID: 11469980}
   m_Layer: 8
   m_Name: BrickWallDestructable (5)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -374,7 +374,7 @@ GameObject:
   - 114: {fileID: 11482756}
   m_Layer: 8
   m_Name: BrickWallDestructable (3)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -395,7 +395,7 @@ GameObject:
   - 114: {fileID: 11461652}
   m_Layer: 8
   m_Name: BrickWallDestructable (3)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -448,7 +448,7 @@ GameObject:
   - 114: {fileID: 11447406}
   m_Layer: 8
   m_Name: BrickWallDestructable (4)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -469,7 +469,7 @@ GameObject:
   - 114: {fileID: 11439456}
   m_Layer: 8
   m_Name: BrickWallDestructable (2)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -490,7 +490,7 @@ GameObject:
   - 114: {fileID: 11400210}
   m_Layer: 8
   m_Name: BrickWallDestructable (5)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -511,7 +511,7 @@ GameObject:
   - 114: {fileID: 11414592}
   m_Layer: 8
   m_Name: BrickWallDestructable
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -532,7 +532,7 @@ GameObject:
   - 114: {fileID: 11419214}
   m_Layer: 8
   m_Name: BrickWallDestructable (6)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -553,7 +553,7 @@ GameObject:
   - 114: {fileID: 11495864}
   m_Layer: 8
   m_Name: BrickWallDestructable (6)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -574,7 +574,7 @@ GameObject:
   - 114: {fileID: 11404400}
   m_Layer: 8
   m_Name: BrickWallDestructable (5)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -610,7 +610,7 @@ GameObject:
   - 114: {fileID: 11497516}
   m_Layer: 8
   m_Name: BrickWallDestructable
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -631,7 +631,7 @@ GameObject:
   - 114: {fileID: 11494384}
   m_Layer: 8
   m_Name: BrickWallDestructable (7)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -668,7 +668,7 @@ GameObject:
   - 114: {fileID: 11479498}
   m_Layer: 8
   m_Name: BrickWallDestructable (1)
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -689,7 +689,7 @@ GameObject:
   - 114: {fileID: 11404208}
   m_Layer: 8
   m_Name: BrickWallDestructable
-  m_TagString: Enemy
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -968,7 +968,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.69999981, y: -7.13999891, z: .5}
+  m_LocalPosition: {x: 96.4999847, y: -7.13999891, z: .5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 434438}
@@ -1912,6 +1912,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11404208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2037,6 +2040,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11418474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2051,6 +2057,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11418510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2131,6 +2140,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11428496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2211,6 +2223,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11435010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2237,6 +2252,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11437098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2251,6 +2269,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11437756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2304,6 +2325,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11445666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2387,6 +2411,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11452672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2413,6 +2440,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11457704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2427,6 +2457,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11458636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2477,6 +2510,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11461652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2506,6 +2542,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11469980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2535,6 +2574,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11470978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2564,6 +2606,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11474742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2578,6 +2623,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11477028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2604,6 +2652,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11479498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2648,6 +2699,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11483590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2698,6 +2752,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11489574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2724,6 +2781,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11491710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2738,6 +2798,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11494384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2824,6 +2887,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11498306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2850,6 +2916,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11499074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2864,6 +2933,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   minHealth: 0
+  invincible: 0
+  invincibilityTime: 2
+  flashing: 0
 --- !u!114 &11499890
 MonoBehaviour:
   m_ObjectHideFlags: 1
