@@ -24,8 +24,8 @@ public class EnemyItemDrop : MonoBehaviour {
 	void Start () 
 	{
 		//coinsToDrop = FindObjectOfType<CoinPickup> ().gameObject;
-		numbOfCoins = Random.Range (2, 4);
-		dropChance = Random.Range (0, 100);
+		// numbOfCoins = Random.Range (2, 4);
+		//dropChance = Random.Range (0, 100);
 		enemyPosition = GetComponent<Transform> ();
 
 		theCoinPooler = GameObject.Find ("CoinPooler").GetComponent<ObjectPooler> ();
@@ -42,6 +42,8 @@ public class EnemyItemDrop : MonoBehaviour {
 
 			position = enemyPosition.position;
 
+			numbOfCoins = Random.Range (2, 4);
+
 			for (int i = 0; i < numbOfCoins; i++) 
 			{
 				GameObject newCoin = theCoinPooler.GetPooledObject();
@@ -51,10 +53,10 @@ public class EnemyItemDrop : MonoBehaviour {
 				newCoin.SetActive(true);
 			}
 
-			if (powerUpChance > dropChance)
+			if(Random.Range(0f, 10f) <= powerUpChance)
 				Instantiate (itemToDrop, position, Quaternion.identity);
 
-			if(Random.Range(0f, 5f) < heartChance)
+			if(Random.Range(0f, 5f) <= heartChance)
 				Instantiate (heartToDrop, position, Quaternion.identity);
 		}
 	}

@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../2015 Spring/Scripting/Gavin is Lonely/Assets/Scripts/MovingPlatformLeftRight.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PowerUp.cs">
     <Files>
-      <File FileName="../../../2015 Spring/Scripting/Gavin is Lonely/Assets/Scripts/MovingPlatformLeftRight.cs" Line="6" Column="1" />
+      <File FileName="Assets\Scripts\Generation\groundGeneration.cs" Line="27" Column="33" />
+      <File FileName="Assets\Scripts\Generation\EnemyGeneration.cs" Line="42" Column="33" />
+      <File FileName="Assets\Scripts\PowerUp.cs" Line="89" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

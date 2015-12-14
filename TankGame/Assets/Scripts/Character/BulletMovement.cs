@@ -10,15 +10,19 @@ public class BulletMovement : MonoBehaviour {
 	private int bulletCollision;
 	public int collisionLimit = 2;
 
+	public bool bulletDestroy;
 
 	void Start () {
-		//StartCoroutine ("BulletDestroyCo");
+
 
 
 	}
 
 	// Update is called once per frame
 	void Update () {
+		if(!bulletDestroy)
+			StartCoroutine ("BulletDestroyCo");
+
 		this.gameObject.GetComponent<Transform> ().transform.Translate (Vector2.right * bulletMoveSpeed * Time.deltaTime);
 
 
@@ -43,6 +47,9 @@ public class BulletMovement : MonoBehaviour {
 			gameObject.SetActive (false);
 		}
 
+		if (other.gameObject.layer == 8)
+			gameObject.SetActive (false);
+
 	}
 
 	void OnTriggerExit2D (Collider2D other)
@@ -58,9 +65,10 @@ public class BulletMovement : MonoBehaviour {
 
 	public IEnumerator BulletDestroyCo()
 	{
-
+		bulletDestroy = true;
 		yield return new WaitForSeconds (bulletLifeSpan);
 		bulletCollision = 0;
+		bulletDestroy = false;
 		gameObject.SetActive (false);
 
 	}

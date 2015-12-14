@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -24,6 +25,14 @@ public class GameManager : MonoBehaviour {
 	public DeathMenu gameOverScreen;
 
 	public bool restarted;
+
+	public Text descriptionText;
+
+	public float distanceTraveled;
+	public float milestone;
+	public float milestoneIncrement;
+	public float multiplier;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -40,6 +49,19 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		distanceTraveled = player.GetComponent<Transform> ().position.x / 10;
+
+		if (distanceTraveled > milestone) 
+		{
+			milestone += milestoneIncrement;
+
+			milestoneIncrement = milestoneIncrement * multiplier;
+
+			player.moveSpeed += multiplier;
+			FindObjectOfType<MyCamera>().moveSpeed += multiplier;
+
+		}
 	
 		if (player.GetComponent<CharacterHealth> ().health == 0) 
 		{
@@ -84,6 +106,23 @@ public class GameManager : MonoBehaviour {
 		theScoreManager.scoreIncrease = true;
 		restarted = false;
 		*/
+	}
+
+
+	public void DescriptionText(string myText)
+	{
+		StartCoroutine ("DescriptionCo", myText);
+
+	}
+
+	public IEnumerator DescriptionCo(string text)
+	{
+		descriptionText.text = text;
+		descriptionText.gameObject.SetActive (true);
+		yield return new WaitForSeconds (2f);
+		descriptionText.gameObject.SetActive (false);
+
+		
 	}
 
 /*

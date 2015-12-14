@@ -9,6 +9,8 @@ public class GroundEnemy : EnemyBaseClass {
 	public CharacterMotor theCharacterMotor;
 	public CharacterShoot theCharacterShoot;
 
+	public MyCamera theCamera;
+
 	public bool timedShot;
 	private Transform enemyShotStartPos;
 
@@ -18,6 +20,7 @@ public class GroundEnemy : EnemyBaseClass {
 	new void Start () {
 		base.Start();
 
+		theCamera = FindObjectOfType<MyCamera> ();
 		thePlayer = GameObject.FindGameObjectWithTag("Player");
 		theCharacterMotor = GetComponent<CharacterMotor> ();
 		theCharacterShoot = GetComponent<CharacterShoot> ();
@@ -48,13 +51,13 @@ public class GroundEnemy : EnemyBaseClass {
 		theCharacterMotor.Movement ();
 		
 		if (actualDistanceFromPlayer < (desiredDistanceFromPlayer - 1))
-			theCharacterMotor.moveSpeed = 8;
+			theCharacterMotor.moveSpeed = theCamera.moveSpeed + 3;
 		else if (actualDistanceFromPlayer > desiredDistanceFromPlayer + 3)
 			theCharacterMotor.moveSpeed = -3;
 		else if (actualDistanceFromPlayer > desiredDistanceFromPlayer)
-			theCharacterMotor.moveSpeed = 3;
+			theCharacterMotor.moveSpeed = theCamera.moveSpeed - 2;
 		else
-			theCharacterMotor.moveSpeed = 5;
+			theCharacterMotor.moveSpeed = theCamera.moveSpeed;
 
 
 	}

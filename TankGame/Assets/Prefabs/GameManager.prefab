@@ -43,6 +43,12 @@ MonoBehaviour:
   ceilingGenerator: {fileID: 0}
   player: {fileID: 0}
   gameOverScreen: {fileID: 0}
+  restarted: 0
+  descriptionText: {fileID: 0}
+  distanceTraveled: 0
+  milestone: 50
+  milestoneIncrement: 50
+  multiplier: 1.04999995
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

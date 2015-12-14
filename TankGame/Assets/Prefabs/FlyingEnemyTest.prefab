@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &138860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 406702}
+  - 61: {fileID: 6188424}
+  m_Layer: 0
+  m_Name: ShotStartPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &163698
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,13 +32,28 @@ GameObject:
   - 114: {fileID: 11418216}
   - 114: {fileID: 11448314}
   - 114: {fileID: 11424618}
-  m_Layer: 0
+  - 114: {fileID: 11472808}
+  - 114: {fileID: 11454216}
+  - 114: {fileID: 11448766}
+  m_Layer: 11
   m_Name: FlyingEnemyTest
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &406702
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138860}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.21000004, z: 0}
+  m_LocalScale: {x: .250717729, y: .250717729, z: .250717729}
+  m_Children: []
+  m_Father: {fileID: 468074}
+  m_RootOrder: 0
 --- !u!4 &468074
 Transform:
   m_ObjectHideFlags: 1
@@ -32,7 +63,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.4000001, y: -1.5, z: 0}
   m_LocalScale: {x: .663301528, y: .663301528, z: .663301528}
-  m_Children: []
+  m_Children:
+  - {fileID: 406702}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!23 &2357704
@@ -95,6 +127,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!61 &6188424
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138860}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!114 &11410760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theCharacterHealth: {fileID: 0}
   theCharacterMotor: {fileID: 11418216}
+  theCharacterShoot: {fileID: 0}
 --- !u!114 &11418216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,11 +165,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a0bb6fc754215e4b9e0220d42f30852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: -2
   adjustedSpeed: 0
   jumpForce: 0
   verticalMoveSpeed: 0
   rb: {fileID: 0}
+  theCharacterHealth: {fileID: 11448314}
 --- !u!114 &11424618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,6 +197,64 @@ MonoBehaviour:
   health: 1
   maxHealth: 1
   minHealth: 0
+  invincible: 1
+  invincibilityTime: 2
+  flashing: 0
+--- !u!114 &11448766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f7adeced87090468a4b5352eb34325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToDrop: {fileID: 144700, guid: 8c47fde0a07dd71418342a5260b810dd, type: 2}
+  heartToDrop: {fileID: 103806, guid: 47e8a9d9da2f05e468ce3b8f665ca45c, type: 2}
+  coinsToDrop: {fileID: 174350, guid: 45cfd856859c40c49a7e65276f5ff101, type: 2}
+  numbOfCoins: 2
+  powerUpChance: 2
+  heartChance: 2
+  theCoinPooler: {fileID: 0}
+--- !u!114 &11454216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2aeced62085ab4ebbaa5bd098d6a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theCharacterHealth: {fileID: 0}
+  startShootingDistance: 11
+  endShootingDistance: 10
+  theFlyingEnemyBombDrop: {fileID: 0}
+  shotWaitTime: .5
+  numOfShots: 1
+--- !u!114 &11472808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd3abf07f082cc42b91aa427b123dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 0}
+  bulletPools: {fileID: 0}
+  moveSpeed: 0
+  damage: 1
+  bulletPenetration: 1
+  bulletTag: EnemyBullet
+  reloadTime: .5
+  reloading: 0
+  shotFired: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -167,7 +272,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: damage
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_IsTrigger
@@ -176,6 +281,58 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: maxHealth
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: invincible
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: theCharacterHealth
+      value: 
+      objectReference: {fileID: 11448314}
+    - target: {fileID: 0}
+      propertyPath: startShootingDistance
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: endShootingDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moveSpeed
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: coinsToDrop
+      value: 
+      objectReference: {fileID: 174350, guid: 45cfd856859c40c49a7e65276f5ff101, type: 2}
+    - target: {fileID: 0}
+      propertyPath: heartToDrop
+      value: 
+      objectReference: {fileID: 103806, guid: 47e8a9d9da2f05e468ce3b8f665ca45c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: itemToDrop
+      value: 
+      objectReference: {fileID: 144700, guid: 8c47fde0a07dd71418342a5260b810dd, type: 2}
+    - target: {fileID: 0}
+      propertyPath: numbOfCoins
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: powerUpChance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: heartChance
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

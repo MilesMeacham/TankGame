@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: 3625223ebf7a49040bed7da8b8caa287
+timeCreated: 1450061052
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MovingTank1
+    21300002: MovingTank2
+    21300004: MovingTank3
+    21300006: MovingTank4
+    21300008: ShootingTank
+    21300010: ShootingTank2
+    21300012: shootingTank3
+    21300014: ShootingTank4
+    21300016: Chest
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 64
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MovingTank1
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 925
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MovingTank2
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 925
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MovingTank3
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 925
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MovingTank4
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 925
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 1, w: 0}
+    - name: ShootingTank
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 925
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShootingTank2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 925
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shootingTank3
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 826
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShootingTank4
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 826
+        width: 152
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Chest
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 391
+        width: 101
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

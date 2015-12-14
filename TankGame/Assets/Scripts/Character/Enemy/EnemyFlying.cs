@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemyFlying : EnemyBaseClass {
 	
 	public CharacterMotor theCharacterMotor;
+	public CharacterShoot theCharacterShoot;
 
 
 	// Use this for initialization
@@ -21,10 +22,11 @@ public class EnemyFlying : EnemyBaseClass {
 
 	void FlyingFormation(){
 
-		StartCoroutine ("FlyingFormationCo");
+		// StartCoroutine ("FlyingFormationCo");
 
 	}
 
+	/*
 	IEnumerator FlyingFormationCo(){
 
 
@@ -48,5 +50,5 @@ public class EnemyFlying : EnemyBaseClass {
 	
 
 	}
-
+*/
 }

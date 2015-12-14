@@ -51,6 +51,7 @@
      <Compile Include="Assets\ColliderCreator.cs" />
      <Compile Include="Assets\FadeOutButton.cs" />
      <Compile Include="Assets\HeartPickup.cs" />
+     <Compile Include="Assets\MaxHealthManager.cs" />
      <Compile Include="Assets\PlayableAreaScript.cs" />
      <Compile Include="Assets\Scripts\Character\BulletMovement.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterHUD.cs" />
@@ -62,11 +63,15 @@
      <Compile Include="Assets\Scripts\Character\Enemy\EnemyBaseClass.cs" />
      <Compile Include="Assets\Scripts\Character\Enemy\EnemyFlying.cs" />
      <Compile Include="Assets\Scripts\Character\Enemy\EnemyItemDrop.cs" />
+     <Compile Include="Assets\Scripts\Character\Enemy\EnemyShootLogic.cs" />
      <Compile Include="Assets\Scripts\Character\Enemy\GroundEnemy.cs" />
      <Compile Include="Assets\Scripts\Character\KeyboardInput.cs" />
      <Compile Include="Assets\Scripts\Character\Player.cs" />
      <Compile Include="Assets\Scripts\CoinPickup.cs" />
+     <Compile Include="Assets\Scripts\FlyingEnemyBombDrop.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Generation\BackgroundGenerator.cs" />
+     <Compile Include="Assets\Scripts\Generation\BackgroundObjectPooler.cs" />
      <Compile Include="Assets\Scripts\Generation\EnemyGeneration.cs" />
      <Compile Include="Assets\Scripts\Generation\ObjectPooler.cs" />
      <Compile Include="Assets\Scripts\Generation\ObstacleGeneration.cs" />

@@ -24,8 +24,8 @@ public class groundGeneration : MonoBehaviour {
 	private float[] theObstacleWidth;
 
 	private int randObstacleTime;
-	private int minObstacleFreq = 5;
-	private int maxObstacleFreq = 20;
+	private int minObstacleFreq = 3;
+	private int maxObstacleFreq = 10;
 //	private bool placingGap;
 
 	private int gapChance = 90;

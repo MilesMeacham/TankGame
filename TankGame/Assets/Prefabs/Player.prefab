@@ -391,7 +391,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147966}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16cb33c7a1aeeca479a1432df3a662d0, type: 3}
   m_Name: 
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e67ce72c74cb44993209e83ecbbbd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpTime: 1
+  jumpTime: 1.5
   jumpTimeCounter: 0
   infiniteJump: 0
   grounded: 0

@@ -59,6 +59,12 @@ public class CharacterPlayer : MonoBehaviour {
 				theCharacterHealth.Invincibility();
 			}
 
+			if (other.gameObject.tag == "Enemy")
+			{
+				theCharacterHealth.removeHealth (1);
+				theCharacterHealth.Invincibility();
+			}
+
 
 		}
 	}

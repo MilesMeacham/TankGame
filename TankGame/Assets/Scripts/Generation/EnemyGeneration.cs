@@ -18,7 +18,7 @@ public class EnemyGeneration : MonoBehaviour {
 	public int enemySpawnChance = 90;
 	private int randNumGen;
 
-	GameObject[] enemyCount;
+	public int enemyCount;
 
 	public float randEnemyThreshold;
 	public ObjectPooler theEnemyPool;
@@ -26,58 +26,63 @@ public class EnemyGeneration : MonoBehaviour {
 	public float maxTimeNoEnemy = 5f;
 	public float timeSinceLastSpawn;
 
+	public bool enemyLimitReached;
+	public int maxEnemyLimit = 3;
+
 	// Use this for initialization
 	void Start () {
-		generationPoint = GameObject.Find ("EnemyGenerationPoint").GetComponent<Transform> ();
+		generationPoint = GameObject.Find ("FlyEnemyGenerationPoint").GetComponent<Transform> ();
 		timeSinceLastSpawn = maxTimeNoEnemy;
 	}
 
 	void Update () {
-//		enemyCount = GameObject.FindGameObjectsWithTag("enemy");
-	//	if(!enemyCount)
-	//		spawningEnemies = false;
-	//	if(enemyCount)
-	//		spawningEnemies = true;
+		enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+		if(enemyCount >= maxEnemyLimit)
+			enemyLimitReached = true;
+		if(enemyCount < maxEnemyLimit)
+			enemyLimitReached = false;
 
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		// Create enemy if this object passes the "generationsPoint"
-		if (transform.position.x < generationPoint.position.x && !spawningEnemies) {
-
-			transform.position = new Vector3 (transform.position.x + 10, transform.position.y, transform.position.z);
-			
-			enemySelector = 0;
-			
-			randNumGen = Random.Range (0, 100);
-		
-			if(randNumGen > enemySpawnChance && !spawningEnemies)
-				StartCoroutine("EnemySpawnCo");
-		}
-
-		if(Random.Range(0f, 100f) < randEnemyThreshold || timeSinceLastSpawn <= 0)
+		if (!enemyLimitReached) 
 		{
-			GameObject newEnemy = theEnemyPool.GetPooledObject();
-			
-			Vector3 enemyPosition = new Vector3 (0f, 0f, 0f);
-			
-			newEnemy.transform.position = transform.position + enemyPosition;
-			newEnemy.transform.rotation = transform.rotation;
-			newEnemy.SetActive(true);
+			// Create enemy if this object passes the "generationsPoint"
+			if (transform.position.x < generationPoint.position.x && !spawningEnemies) {
 
-			timeSinceLastSpawn = maxTimeNoEnemy;
+				transform.position = new Vector3 (transform.position.x + 10, transform.position.y, transform.position.z);
+				
+				enemySelector = 0;
+				
+				randNumGen = Random.Range (0, 100);
+			
+				if (randNumGen < enemySpawnChance && !spawningEnemies)
+					StartCoroutine ("EnemySpawnCo");
+			}
+
+			if (Random.Range (0f, 100f) > randEnemyThreshold || timeSinceLastSpawn <= 0) {
+				GameObject newEnemy = theEnemyPool.GetPooledObject ();
+				
+				Vector3 enemyPosition = new Vector3 (0f, 0f, 0f);
+				
+				newEnemy.transform.position = transform.position + enemyPosition;
+				newEnemy.transform.rotation = transform.rotation;
+				newEnemy.SetActive (true);
+
+				timeSinceLastSpawn = maxTimeNoEnemy;
+			}
+
+			timeSinceLastSpawn -= Time.deltaTime;
 		}
-
-		timeSinceLastSpawn -= Time.deltaTime;
 
 	}
 
 	public IEnumerator EnemySpawnCo()
 	{
 		spawningEnemies = true;
-		int enemiesToSpawn = 4;
+		int enemiesToSpawn = 1;
 
 
 

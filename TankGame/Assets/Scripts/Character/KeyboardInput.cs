@@ -28,7 +28,7 @@ public class KeyboardInput : MonoBehaviour {
 	void FixedUpdate () 
 	{
 		
-		if (Input.GetKey (KeyCode.Space) || (Input.GetKey (KeyCode.Mouse0)))
+		if (Input.GetKey (KeyCode.Space))
 			theCharacterJump.Jumping ();
 
 		theCharacterMotor.Movement ();

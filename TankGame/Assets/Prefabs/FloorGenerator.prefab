@@ -23,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5, y: -7.13999891, z: .5}
+  m_LocalPosition: {x: -47.7859421, y: -7.153687, z: .078125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,11 +44,22 @@ MonoBehaviour:
   distanceBetweenMin: 0
   distanceBetweenMax: 0
   theObstacles:
-  - {fileID: 164876, guid: b96907411ea689643bb0d97276dc1b31, type: 2}
-  - {fileID: 137066, guid: 228c938ee1ca0d04ab02a43b89521272, type: 2}
+  - {fileID: 187500, guid: 0f8349b1739a3254eb418beb41426495, type: 2}
+  - {fileID: 144184, guid: 3f4a681a64323c545bc129adae31c768, type: 2}
+  - {fileID: 155686, guid: 4aade8870bdbd5d4c8c525a9760ad85b, type: 2}
+  - {fileID: 150548, guid: fd593eb558d2b9140bcedf6cefe42e6f, type: 2}
+  - {fileID: 199504, guid: 6810005f2373a384ca116e146592d336, type: 2}
+  - {fileID: 144290, guid: c8b799d818e8f93469c838f055fc68c4, type: 2}
+  - {fileID: 107642, guid: 4348d3d3e8016de438c8211412094f14, type: 2}
+  - {fileID: 125174, guid: 6eddb83f6d3c0f04bb7d0961da639b5a, type: 2}
+  - {fileID: 132912, guid: cb252a0ce1697504ba2147c6c410f805, type: 2}
+  - {fileID: 104296, guid: 3f34203dda94b2d4eb36518eea58621f, type: 2}
+  - {fileID: 158292, guid: f78b73880bfb79b4cb058f11881e5b14, type: 2}
+  - {fileID: 142456, guid: 2d3806ed78982614d94c4ffcea844495, type: 2}
+  - {fileID: 101554, guid: a74bc9d02588f2348bb9c06610b53841, type: 2}
   - {fileID: 140932, guid: 18ec31433ee64a649a2c75050529b6dc, type: 2}
   - {fileID: 171498, guid: c1cd96b89e2f1ce4bb9bd60926d27308, type: 2}
-  obstacleTime: 1
+  obstacleTime: 0
   objectPools:
   - {fileID: 0}
   gapChanceGen: 0

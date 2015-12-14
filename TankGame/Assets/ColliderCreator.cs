@@ -43,7 +43,10 @@ public class ColliderCreator : MonoBehaviour {
 		
 		barriers = new GameObject[] { top, bottom, left, right };
 		
-		foreach(var b in barriers) {
+		foreach(var b in barriers) 
+		{
+
+
 			DestroyImmediate(b.GetComponent<Collider>());
 			//no need to render these.
 			DestroyImmediate(b.GetComponent<Renderer>());
@@ -54,7 +57,10 @@ public class ColliderCreator : MonoBehaviour {
 			var rb = b.AddComponent<Rigidbody2D>();
 			rb.isKinematic = true;
 			bc.isTrigger = true;
-			b.tag = ("Deathzone");
+			if(b.name == "Left" || b.name == "Bottom")
+				b.tag = ("Deathzone");
+			if(b.name == "Top")
+				bc.isTrigger = false;
 		}
 	}
 	

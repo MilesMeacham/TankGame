@@ -11,8 +11,12 @@ public class CharacterHealth : MonoBehaviour {
 	public float invincibilityTime = 2;
 	public bool flashing;
 
+	private GameObject playerSprite;
+
 	public void Start () {
 		health = maxHealth;
+		if(gameObject.tag == "Player")
+			playerSprite = GameObject.Find ("PlayerArt");
 	}
 
 	public void Update () {
@@ -22,7 +26,7 @@ public class CharacterHealth : MonoBehaviour {
 
 		if (invincible && gameObject.tag == "Player" && !flashing) 
 		{
-			GameObject playerSprite = GameObject.Find ("PlayerArt");
+
 			StartCoroutine ("SpriteFlashCo", playerSprite);
 
 		}
@@ -45,8 +49,16 @@ public class CharacterHealth : MonoBehaviour {
 	
 	public void addMaxHealth (float maxHealthToAdd)
 	{
-		maxHealth += maxHealthToAdd;
-		
+		if(maxHealth != 9)
+		{
+			maxHealth += maxHealthToAdd;
+			health = maxHealth;
+
+			if (gameObject.tag == "Player") 
+			{
+				GameObject.Find("Hearts").GetComponent<MaxHealthManager>().ActivateHeart();
+			}
+		}
 	}
 	
 	public void removeMaxHealth (float maxHealthToRemove)
@@ -67,6 +79,12 @@ public class CharacterHealth : MonoBehaviour {
 			health = maxHealth;
 			gameObject.GetComponent<GroundEnemy>().timedShot = false;
 
+		}
+		if(gameObject.layer == 11)
+		{
+			EnemyItemDrop theEnemy = GetComponent<EnemyItemDrop>();
+			theEnemy.ItemDrop();
+			health = maxHealth;		
 		}
 
 	}
