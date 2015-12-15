@@ -1,6 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Character\BulletMovement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\playerAnimation.cs">
     <Files>
       <File FileName="Assets\Scripts\Character\Enemy\GroundEnemy.cs" Line="49" Column="4" />
       <File FileName="Assets\EnemyJumpAI.cs" Line="1" Column="1" />
@@ -8,8 +8,9 @@
       <File FileName="Assets\Scripts\Character\KeyboardInput.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Character\CharacterMotor.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Character\Enemy\EnemyFlying.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Character\CharacterPlayer.cs" Line="64" Column="5" />
+      <File FileName="Assets\Scripts\Character\CharacterPlayer.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Character\BulletMovement.cs" Line="51" Column="37" />
+      <File FileName="Assets\playerAnimation.cs" Line="38" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
