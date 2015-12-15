@@ -24,6 +24,9 @@ public class EnemyBaseClass : MonoBehaviour {
 		if (other.gameObject.tag == "PlayerBullet")
 			theCharacterHealth.removeHealth(other.GetComponent<BulletMovement>().bulletDamage);
 
+		if (other.gameObject.tag == "Deathzone")
+			gameObject.SetActive (false);
+
 	}
 	
 

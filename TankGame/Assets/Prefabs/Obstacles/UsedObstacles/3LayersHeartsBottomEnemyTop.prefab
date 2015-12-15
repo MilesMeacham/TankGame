@@ -2105,7 +2105,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 134.300003, y: -7.13999891, z: .5}
+  m_LocalPosition: {x: 337.920044, y: -7.13999891, z: .5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467482}
@@ -3014,6 +3014,8 @@ MonoBehaviour:
   threeHitWall: {fileID: 21300016, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   twoHitWall: {fileID: 21300018, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   oneHitWall: {fileID: 21300020, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
+  currentHealth: 0
+  previousHealth: 0
   theCharacterHealth: {fileID: 0}
 --- !u!114 &11405628
 MonoBehaviour:
@@ -3058,6 +3060,8 @@ MonoBehaviour:
   threeHitWall: {fileID: 21300016, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   twoHitWall: {fileID: 21300018, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   oneHitWall: {fileID: 21300020, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
+  currentHealth: 0
+  previousHealth: 0
   theCharacterHealth: {fileID: 0}
 --- !u!114 &11418758
 MonoBehaviour:
@@ -3085,6 +3089,8 @@ MonoBehaviour:
   threeHitWall: {fileID: 21300016, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   twoHitWall: {fileID: 21300018, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   oneHitWall: {fileID: 21300020, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
+  currentHealth: 0
+  previousHealth: 0
   theCharacterHealth: {fileID: 0}
 --- !u!114 &11427984
 MonoBehaviour:
@@ -3148,6 +3154,7 @@ MonoBehaviour:
   reloadTime: .5
   reloading: 0
   shotFired: 0
+  tankShot: {fileID: 0}
 --- !u!114 &11449478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3174,6 +3181,8 @@ MonoBehaviour:
   threeHitWall: {fileID: 21300016, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   twoHitWall: {fileID: 21300018, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   oneHitWall: {fileID: 21300020, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
+  currentHealth: 0
+  previousHealth: 0
   theCharacterHealth: {fileID: 0}
 --- !u!114 &11461594
 MonoBehaviour:
@@ -3189,6 +3198,8 @@ MonoBehaviour:
   threeHitWall: {fileID: 21300016, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   twoHitWall: {fileID: 21300018, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   oneHitWall: {fileID: 21300020, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
+  currentHealth: 0
+  previousHealth: 0
   theCharacterHealth: {fileID: 0}
 --- !u!114 &11461686
 MonoBehaviour:
@@ -3286,6 +3297,8 @@ MonoBehaviour:
   threeHitWall: {fileID: 21300016, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   twoHitWall: {fileID: 21300018, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   oneHitWall: {fileID: 21300020, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
+  currentHealth: 0
+  previousHealth: 0
   theCharacterHealth: {fileID: 0}
 --- !u!114 &11483110
 MonoBehaviour:
@@ -3359,6 +3372,7 @@ MonoBehaviour:
   theCharacterHealth: {fileID: 0}
   desiredDistanceFromPlayer: 10
   actualDistanceFromPlayer: 0
+  yDistanceFromPlayer: 0
   theCharacterMotor: {fileID: 0}
   theCharacterShoot: {fileID: 0}
   theCamera: {fileID: 0}

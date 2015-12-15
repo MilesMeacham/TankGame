@@ -10,6 +10,7 @@ public class CharacterPlayer : MonoBehaviour {
 	
 	public bool adjustedSpeed;
 
+	public AudioSource brickWallBreak;
 	
 	// Use this for initialization
 	public void Start () 
@@ -59,7 +60,7 @@ public class CharacterPlayer : MonoBehaviour {
 				theCharacterHealth.Invincibility();
 			}
 
-			if (other.gameObject.tag == "Enemy")
+			if (other.gameObject.layer == 11)
 			{
 				theCharacterHealth.removeHealth (1);
 				theCharacterHealth.Invincibility();

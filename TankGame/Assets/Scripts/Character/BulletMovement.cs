@@ -47,19 +47,17 @@ public class BulletMovement : MonoBehaviour {
 			gameObject.SetActive (false);
 		}
 
-		if (other.gameObject.layer == 8)
-			gameObject.SetActive (false);
 
-	}
-
-	void OnTriggerExit2D (Collider2D other)
-	{
-
-		if (other.gameObject.tag == "PlayableArea")
-		{
+		if (other.gameObject.layer == 8) {
 			gameObject.SetActive (false);
 			bulletCollision = 0;
 		}
+
+	}
+	
+
+	void OnColliderEnter2D (Collision2D other)
+	{
 
 	}
 

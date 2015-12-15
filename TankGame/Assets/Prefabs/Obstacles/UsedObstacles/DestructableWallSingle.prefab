@@ -319,7 +319,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 846.200134, y: -7.13999891, z: .5}
+  m_LocalPosition: {x: 246.500092, y: -7.13999891, z: .5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 440504}
@@ -895,6 +895,8 @@ MonoBehaviour:
   threeHitWall: {fileID: 21300016, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   twoHitWall: {fileID: 21300018, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   oneHitWall: {fileID: 21300020, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
+  currentHealth: 0
+  previousHealth: 0
   theCharacterHealth: {fileID: 0}
 --- !u!114 &11444870
 MonoBehaviour:
@@ -910,6 +912,8 @@ MonoBehaviour:
   threeHitWall: {fileID: 21300016, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   twoHitWall: {fileID: 21300018, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   oneHitWall: {fileID: 21300020, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
+  currentHealth: 0
+  previousHealth: 0
   theCharacterHealth: {fileID: 0}
 --- !u!114 &11445432
 MonoBehaviour:
@@ -925,6 +929,8 @@ MonoBehaviour:
   threeHitWall: {fileID: 21300016, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   twoHitWall: {fileID: 21300018, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   oneHitWall: {fileID: 21300020, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
+  currentHealth: 0
+  previousHealth: 0
   theCharacterHealth: {fileID: 0}
 --- !u!114 &11445578
 MonoBehaviour:
@@ -1010,6 +1016,8 @@ MonoBehaviour:
   threeHitWall: {fileID: 21300016, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   twoHitWall: {fileID: 21300018, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   oneHitWall: {fileID: 21300020, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
+  currentHealth: 0
+  previousHealth: 0
   theCharacterHealth: {fileID: 0}
 --- !u!114 &11471154
 MonoBehaviour:
@@ -1025,6 +1033,8 @@ MonoBehaviour:
   threeHitWall: {fileID: 21300016, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   twoHitWall: {fileID: 21300018, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   oneHitWall: {fileID: 21300020, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
+  currentHealth: 0
+  previousHealth: 0
   theCharacterHealth: {fileID: 0}
 --- !u!114 &11473962
 MonoBehaviour:
@@ -1040,6 +1050,8 @@ MonoBehaviour:
   threeHitWall: {fileID: 21300016, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   twoHitWall: {fileID: 21300018, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   oneHitWall: {fileID: 21300020, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
+  currentHealth: 0
+  previousHealth: 0
   theCharacterHealth: {fileID: 0}
 --- !u!114 &11474300
 MonoBehaviour:
@@ -1055,6 +1067,8 @@ MonoBehaviour:
   threeHitWall: {fileID: 21300016, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   twoHitWall: {fileID: 21300018, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   oneHitWall: {fileID: 21300020, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
+  currentHealth: 0
+  previousHealth: 0
   theCharacterHealth: {fileID: 0}
 --- !u!114 &11479670
 MonoBehaviour:
@@ -1140,6 +1154,8 @@ MonoBehaviour:
   threeHitWall: {fileID: 21300016, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   twoHitWall: {fileID: 21300018, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
   oneHitWall: {fileID: 21300020, guid: d5eba1115789bf64a95db89c129706c5, type: 3}
+  currentHealth: 0
+  previousHealth: 0
   theCharacterHealth: {fileID: 0}
 --- !u!212 &21202216
 SpriteRenderer:

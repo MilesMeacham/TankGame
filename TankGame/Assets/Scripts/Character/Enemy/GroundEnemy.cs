@@ -5,6 +5,7 @@ public class GroundEnemy : EnemyBaseClass {
 
 	public float desiredDistanceFromPlayer = 10;
 	public float actualDistanceFromPlayer;
+	public float yDistanceFromPlayer;
 	
 	public CharacterMotor theCharacterMotor;
 	public CharacterShoot theCharacterShoot;
@@ -32,6 +33,7 @@ public class GroundEnemy : EnemyBaseClass {
 	
 	void Update () {
 
+		yDistanceFromPlayer = transform.position.y - thePlayer.transform.position.y;
 		actualDistanceFromPlayer = transform.position.x - thePlayer.transform.position.x;
 		
 	}
@@ -40,9 +42,12 @@ public class GroundEnemy : EnemyBaseClass {
 	void FixedUpdate () {
 		EnemyMovement ();
 
-		if (!timedShot)
+		if (!timedShot && actualDistanceFromPlayer < (15))
 			StartCoroutine("TimedShotCo");
-		
+
+		if (yDistanceFromPlayer < -20)
+			gameObject.SetActive (false);
+
 	}
 	
 	void EnemyMovement()
@@ -69,5 +74,6 @@ public class GroundEnemy : EnemyBaseClass {
 		theCharacterShoot.Shooting(enemyShotStartPos);
 		timedShot = false;
 	}
+
 
 }

@@ -2093,7 +2093,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 563.120056, y: -7.13999891, z: .5}
+  m_LocalPosition: {x: 96.6999969, y: -7.13999891, z: .5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429206}
@@ -2540,6 +2540,7 @@ MonoBehaviour:
   theCharacterHealth: {fileID: 0}
   desiredDistanceFromPlayer: 10
   actualDistanceFromPlayer: 0
+  yDistanceFromPlayer: 0
   theCharacterMotor: {fileID: 0}
   theCharacterShoot: {fileID: 0}
   theCamera: {fileID: 0}
@@ -2565,6 +2566,7 @@ MonoBehaviour:
   reloadTime: .5
   reloading: 0
   shotFired: 0
+  tankShot: {fileID: 0}
 --- !u!212 &21202136
 SpriteRenderer:
   m_ObjectHideFlags: 1

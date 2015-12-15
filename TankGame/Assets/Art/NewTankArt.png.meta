@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8967ad4f02377e8428f76a5d00396e98
-timeCreated: 1449566379
+timeCreated: 1450162711
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -33,6 +33,8 @@ TextureImporter:
     21300052: CoinTurnLeft2
     21300054: CoinTurnLeft
     21300056: Bullet
+    21300058: Fire
+    21300060: Fire2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -306,6 +308,26 @@ TextureImporter:
         y: 880
         width: 18
         height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fire
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 490
+        width: 75
+        height: 63
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fire2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 490
+        width: 75
+        height: 63
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

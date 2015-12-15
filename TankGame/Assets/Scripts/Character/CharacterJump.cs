@@ -11,7 +11,9 @@ public class CharacterJump : MonoBehaviour {
 	private CharacterMotor theCharacterMotor;
 
 	public bool grounded;
+	public bool groundedEnemy;
 	public LayerMask whatIsGround;
+	public LayerMask whatIsEnemy;
 	private Collider2D groundCheck;
 	private GameObject groundCheckObj;
 
@@ -46,7 +48,7 @@ public class CharacterJump : MonoBehaviour {
 
 	void HoverRefill() {
 		
-		if (grounded && jumpTimeCounter < jumpTime)
+		if (grounded && jumpTimeCounter < jumpTime || groundedEnemy && jumpTimeCounter < jumpTime)
 			jumpTimeCounter += Time.deltaTime * hoverRefillSpeed;
 		
 		if (jumpTimeCounter > jumpTime)
@@ -55,5 +57,6 @@ public class CharacterJump : MonoBehaviour {
 
 	void GroundCheck () {
 		grounded = Physics2D.IsTouchingLayers (groundCheck, whatIsGround);
+		groundedEnemy = Physics2D.IsTouchingLayers (groundCheck, whatIsEnemy);
 	}
 }

@@ -8,11 +8,17 @@ public class BrickWallChange : MonoBehaviour {
 	public Sprite twoHitWall;
 	public Sprite oneHitWall;
 
+	public float currentHealth;
+	public float previousHealth;
+
 	private SpriteRenderer theSpriteRenderer;
 
 	public CharacterHealth theCharacterHealth;
+
+	private AudioSource brickWallBreak;
 	// Use this for initialization
 	void Start () {
+		brickWallBreak = GameObject.Find ("Player").GetComponent<CharacterPlayer> ().brickWallBreak;
 		theCharacterHealth = GetComponent<CharacterHealth> ();
 		theSpriteRenderer = GetComponent<SpriteRenderer> ();
 		theSpriteRenderer.sprite = threeHitWall;
@@ -20,13 +26,18 @@ public class BrickWallChange : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		currentHealth = theCharacterHealth.health;
 
-		if (theCharacterHealth.health >= 3)
+		if (currentHealth >= 3)
 			theSpriteRenderer.sprite = threeHitWall;
-		else if (theCharacterHealth.health < 3 && theCharacterHealth.health >= 2)
+		else if (currentHealth < 3 && theCharacterHealth.health >= 2)
 			theSpriteRenderer.sprite = twoHitWall;
 		else
 			theSpriteRenderer.sprite = oneHitWall;
 
+		if(previousHealth > currentHealth)
+			brickWallBreak.Play ();
+
+		previousHealth = currentHealth;
 	}
 }

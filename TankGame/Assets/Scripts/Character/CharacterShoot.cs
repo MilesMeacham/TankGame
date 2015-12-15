@@ -15,13 +15,17 @@ public class CharacterShoot : MonoBehaviour {
 
 	public bool shotFired;
 
+
+	public AudioSource tankShot;
+
 	//public Animator theAnimator;
 	
 	void Start () 
 	{
 		bulletPools = GameObject.Find ("BulletPooler").GetComponent<ObjectPooler> ();
-
 		//theAnimator = GetComponentInChildren<Animator> ();
+		if (tag != "Player")
+			tankShot = GameObject.Find ("Player").GetComponent<CharacterShoot> ().tankShot;
 	}
 	
 	
@@ -47,6 +51,9 @@ public class CharacterShoot : MonoBehaviour {
 			bullet.gameObject.tag = bulletTag;
 			bullet.transform.position = shotStartPos.transform.position;
 			bullet.transform.rotation = shotStartPos.transform.rotation;
+
+			tankShot.Play ();
+
 			bullet.SetActive (true);
 			reloading = true;
 

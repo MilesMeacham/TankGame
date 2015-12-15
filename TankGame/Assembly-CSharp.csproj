@@ -49,6 +49,7 @@
      <Compile Include="Assets\BrickWallChange.cs" />
      <Compile Include="Assets\CoinSpread.cs" />
      <Compile Include="Assets\ColliderCreator.cs" />
+     <Compile Include="Assets\EnemyJumpAI.cs" />
      <Compile Include="Assets\FadeOutButton.cs" />
      <Compile Include="Assets\HeartPickup.cs" />
      <Compile Include="Assets\MaxHealthManager.cs" />

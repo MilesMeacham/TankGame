@@ -1,15 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Character\Enemy\GroundEnemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Character\BulletMovement.cs">
     <Files>
-      <File FileName="Assets\Scripts\Generation\groundGeneration.cs" Line="27" Column="33" />
-      <File FileName="Assets\Scripts\Generation\EnemyGeneration.cs" Line="42" Column="33" />
-      <File FileName="Assets\Scripts\PowerUp.cs" Line="85" Column="5" />
-      <File FileName="Assets\Scripts\Character\CharacterPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character\Enemy\GroundEnemy.cs" Line="49" Column="4" />
+      <File FileName="Assets\EnemyJumpAI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character\CharacterJump.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character\KeyboardInput.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Character\CharacterMotor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="62" Column="57" />
-      <File FileName="Assets\Scripts\UI\ScoreManager.cs" Line="41" Column="53" />
-      <File FileName="Assets\Scripts\Character\Enemy\GroundEnemy.cs" Line="60" Column="53" />
+      <File FileName="Assets\Scripts\Character\Enemy\EnemyFlying.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character\CharacterPlayer.cs" Line="64" Column="5" />
+      <File FileName="Assets\Scripts\Character\BulletMovement.cs" Line="51" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
